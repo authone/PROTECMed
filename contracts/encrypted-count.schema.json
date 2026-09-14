@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "encrypted-count",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,63}$"
+    },
+    "epoch_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "party_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,63}$"
+    },
+    "query_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "snapshot_token": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,63}$"
+    },
+    "ciphertext_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "ciphertext_size": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 16777216
+    },
+    "final_key_tag": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "pattern": "^[ -~]+$"
+    },
+    "format_id": {
+      "const": "openfhe-1.5.1-binary"
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "epoch_sha256",
+    "party_id",
+    "query_sha256",
+    "snapshot_token",
+    "ciphertext_sha256",
+    "ciphertext_size",
+    "final_key_tag",
+    "format_id"
+  ],
+  "additionalProperties": false
+}

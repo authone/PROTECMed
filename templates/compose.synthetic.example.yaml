@@ -1,0 +1,63 @@
+# TEMPLATE ONLY: requires the production images and entrypoints built in M4/M5.
+# Not an installer and not executed in this delivery. Synthetic single-host D1 only.
+# Image variables must be immutable reviewed references, not :latest tags.
+name: protecmed-synthetic
+x-party: &party
+  image: ${PROTECMED_PARTY_IMAGE:?Set the built reviewed party image reference}
+  read_only: true
+  user: "10001:10001"
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  tmpfs:
+    - /tmp:uid=10001,gid=10001,mode=0700
+    - /run/protecmed-keys:uid=10001,gid=10001,mode=0700
+  networks: [protecmed]
+services:
+  coordinator:
+    image: ${PROTECMED_COORDINATOR_IMAGE:?Set the built reviewed coordinator image reference}
+    read_only: true
+    user: "10001:10001"
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    ports: ["127.0.0.1:8080:8080"]
+    environment:
+      PROTECMED_MODE: synthetic-local
+    volumes: ["coordinator-state:/var/lib/protecmed"]
+    tmpfs: ["/tmp:uid=10001,gid=10001,mode=0700"]
+    networks: [protecmed]
+  party-a:
+    <<: *party
+    ports: ["127.0.0.1:8081:8080"]
+    environment:
+      PROTECMED_MODE: synthetic-local
+      PROTECMED_PARTY_ID: party-a
+      PROTECMED_COORDINATOR_URL: http://coordinator:8080
+    volumes: ["a-state:/var/lib/protecmed", "a-import:/imports:ro"]
+  party-b:
+    <<: *party
+    ports: ["127.0.0.1:8082:8080"]
+    environment:
+      PROTECMED_MODE: synthetic-local
+      PROTECMED_PARTY_ID: party-b
+      PROTECMED_COORDINATOR_URL: http://coordinator:8080
+    volumes: ["b-state:/var/lib/protecmed", "b-import:/imports:ro"]
+  party-c:
+    <<: *party
+    profiles: [three]
+    ports: ["127.0.0.1:8083:8080"]
+    environment:
+      PROTECMED_MODE: synthetic-local
+      PROTECMED_PARTY_ID: party-c
+      PROTECMED_COORDINATOR_URL: http://coordinator:8080
+    volumes: ["c-state:/var/lib/protecmed", "c-import:/imports:ro"]
+networks:
+  protecmed:
+    internal: true
+volumes:
+  coordinator-state:
+  a-state:
+  b-state:
+  c-state:
+  a-import:
+  b-import:
+  c-import:

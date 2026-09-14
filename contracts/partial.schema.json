@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "partial",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "party_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,63}$"
+    },
+    "request_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "aggregate_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "epoch_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "role": {
+      "enum": [
+        "lead",
+        "main"
+      ]
+    },
+    "decision": {
+      "const": "APPROVE"
+    },
+    "approved_at": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+    },
+    "partial_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "partial_size": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 16777216
+    }
+  },
+  "required": [
+    "schema_version",
+    "party_id",
+    "request_sha256",
+    "aggregate_sha256",
+    "epoch_sha256",
+    "role",
+    "decision",
+    "approved_at",
+    "partial_sha256",
+    "partial_size"
+  ],
+  "additionalProperties": false
+}

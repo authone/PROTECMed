@@ -1,0 +1,19 @@
+digraph PROTECMed {
+  graph [rankdir=TB, bgcolor="white", pad="0.25", nodesep="0.40", ranksep="0.62", fontname="DejaVu Sans"];
+  node [shape=box, style="rounded,filled", fillcolor="#EDF4F8", color="#345C73", fontname="DejaVu Sans", fontsize=12, margin="0.18,0.14"];
+  edge [fontname="DejaVu Sans", fontsize=10, color="#456575", arrowsize=0.7];
+  label="PROTECMed • exact cohort counts • unanimous release"; labelloc="t"; fontsize=18;
+  A [label="PROVIDER A • local UI\n\nPrivate clinical snapshot\nFilter → bounded count → encrypt\nPrivate FHE share A\nVerify aggregate + local approval\nLead partial", width=2.8];
+  B [label="PROVIDER B • local UI\n\nPrivate clinical snapshot\nFilter → bounded count → encrypt\nPrivate FHE share B\nVerify aggregate + local approval\nMain partial", width=2.8];
+  C [label="PROVIDER C • only in 3/3\n\nPrivate clinical snapshot\nFilter → bounded count → encrypt\nPrivate FHE share C\nVerify aggregate + local approval\nMain partial", width=2.8, fillcolor="#F3F4F6"];
+  {rank=same; A; B; C;}
+  CO [label="COORDINATOR • no FHE secret share\n\nRelay signed public-key rounds and encrypted artifacts\nVerify exactly one encrypted count per provider → EvalAdd\nPublish complete inputs + aggregate + immutable request\nVerify all signed approvals/partials → fusion → approved total\n\nNo patient file • no local count • no private-key mount", width=8.2, fillcolor="#E5F2EE", color="#326756"];
+  A -> CO [label="encrypted count\nsigned partial"];
+  B -> CO [label="encrypted count\nsigned partial"];
+  C -> CO [label="encrypted count\nsigned partial"];
+  CO -> A [label="request + inputs", style=dashed, constraint=false];
+  CO -> B [label="request + inputs", style=dashed, constraint=false];
+  CO -> C [label="request + inputs", style=dashed, constraint=false];
+  NOTE [shape=note, label="Providers fetch requests through outbound polling. A received request is not an approval.\n2/2: A + B required. 3/3: A + B + C required.\nOne host = simulation; separate provider-controlled hosts = distributed validation.", fontsize=11, width=8.2, fillcolor="#FFFFFF", color="#BCC5CC"];
+  CO -> NOTE [style=invis];
+}

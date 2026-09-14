@@ -1,0 +1,162 @@
+{
+  "query": {
+    "schema_version": "2.0",
+    "query_id": "Q004",
+    "query_version": 1,
+    "logic": "AND",
+    "filters": [
+      {
+        "field": "diagnosis",
+        "operator": "eq",
+        "value": "MBL"
+      },
+      {
+        "field": "rt_technique",
+        "operator": "eq",
+        "value": "IMRT"
+      },
+      {
+        "field": "toxicity_wbc_ge2",
+        "operator": "eq",
+        "value": true
+      }
+    ],
+    "missing_value_policy": "exclude_required_missing"
+  },
+  "run-plan": {
+    "schema_version": "2.0",
+    "study_id": "synthetic-study",
+    "run_id": "synthetic-run",
+    "party_count": 3,
+    "threshold": 3,
+    "roster": [
+      {
+        "party_id": "party-a",
+        "identity_key_sha256": "f91f0189eec7014089753581f00526dc25fc54a91f0e68e1f3e47ccfcb6e7bfc",
+        "snapshot_token": "snapshot-a"
+      },
+      {
+        "party_id": "party-b",
+        "identity_key_sha256": "a2d4ad0e44555739269712498e48cabc6d20f4cbade158ab4e23508ccf62eafa",
+        "snapshot_token": "snapshot-b"
+      },
+      {
+        "party_id": "party-c",
+        "identity_key_sha256": "7173d34321a39daddf7980b45996933da13c6994af0c4f8590978b16ac2b35a0",
+        "snapshot_token": "snapshot-c"
+      }
+    ],
+    "lead_party": "party-a",
+    "recipient_ids": [
+      "coordinator-reviewer"
+    ],
+    "query_sha256": "8e35c2cd3bf6641bdb0e2050b76932cbb2e6034a0ddacc1d9bea82a6ba57f7cf",
+    "mapping_sha256": "62c66a7a5dd70c3146618063c344e531e6d4b59e379808443ce962b3abd63c5a",
+    "profile_id": "bgv-count-nofn-v2",
+    "module_id": "cohort-count-local-v2",
+    "local_row_cap": 10000,
+    "release_policy_id": "exact-count-restricted-demo-v1"
+  },
+  "decryption-request": {
+    "schema_version": "2.0",
+    "study_id": "synthetic-study",
+    "run_id": "synthetic-run",
+    "request_id": "request-one",
+    "epoch_sha256": "afc9b31d9f3f3645ae563606e1ddbe4b0e72b247e3bc9dff6251f5ee8961ae48",
+    "query_sha256": "8e35c2cd3bf6641bdb0e2050b76932cbb2e6034a0ddacc1d9bea82a6ba57f7cf",
+    "input_set_sha256": "32381523e63197c929b67f793a8098bed0ae3a6fa902634fdbcc6fa4567f3346",
+    "aggregate_sha256": "ee3c65b5c7f4dd0ebed8bf046725e273e3eeed3c6776b0667b9deb6432f6c3ea",
+    "recipients_sha256": "ce6a5409d393210a942ba6fd2dd5cf624041d766a1f32b893bec7c76067b3bdc",
+    "required_parties": [
+      "party-a",
+      "party-b",
+      "party-c"
+    ],
+    "threshold": 3,
+    "lead_party": "party-a",
+    "nonce": "e2ff4b48ba83de4268c994afaa960f01bdf42eba2d61a7d61c94f4aafe44599b",
+    "created_at": "2026-09-05T10:00:00Z",
+    "expires_at": "2026-09-05T11:00:00Z"
+  },
+  "key-round": {
+    "schema_version": "2.0",
+    "run_id": "synthetic-run",
+    "run_plan_sha256": "64879f7d6b960a01909762d911a32d4582c20010c5641ee90278b644a9e3b525",
+    "context_sha256": "ea7792a26f405e2ae9c6f49ca93bbe6076ceac0a1fc53d83426c7d7f2d9377e4",
+    "round_index": 0,
+    "party_id": "party-a",
+    "incoming_public_key_sha256": null,
+    "outgoing_public_key_sha256": "1177a8d490811ad8d207609756c3bcccccb519c529fe82bbd7158cd617a25501"
+  },
+  "epoch-manifest": {
+    "schema_version": "2.0",
+    "run_id": "synthetic-run",
+    "epoch_id": "epoch-one",
+    "run_plan_sha256": "64879f7d6b960a01909762d911a32d4582c20010c5641ee90278b644a9e3b525",
+    "context_sha256": "ea7792a26f405e2ae9c6f49ca93bbe6076ceac0a1fc53d83426c7d7f2d9377e4",
+    "final_public_key_sha256": "bbbe7e41950a3e64238bb33c813212d71eb9d9f67e4255d6ef7d83471c0cb197",
+    "key_round_transcript_sha256": "206cd5ee00560b33bfef299d078345297b21b2a5be497d7ef57ae84576ee6100"
+  },
+  "encrypted-count": {
+    "schema_version": "2.0",
+    "run_id": "synthetic-run",
+    "epoch_sha256": "afc9b31d9f3f3645ae563606e1ddbe4b0e72b247e3bc9dff6251f5ee8961ae48",
+    "party_id": "party-a",
+    "query_sha256": "8e35c2cd3bf6641bdb0e2050b76932cbb2e6034a0ddacc1d9bea82a6ba57f7cf",
+    "snapshot_token": "snapshot-a",
+    "ciphertext_sha256": "d3d8c4af8eee18487034d5834d6db37dcd6f00b337ebc1a47a80995ee170cad1",
+    "ciphertext_size": 100,
+    "final_key_tag": "synthetic-tag",
+    "format_id": "openfhe-1.5.1-binary"
+  },
+  "input-set": {
+    "schema_version": "2.0",
+    "run_id": "synthetic-run",
+    "epoch_sha256": "afc9b31d9f3f3645ae563606e1ddbe4b0e72b247e3bc9dff6251f5ee8961ae48",
+    "inputs": [
+      {
+        "party_id": "party-a",
+        "submission_sha256": "ee466fa492b240602468e15fb698957eb9389f4214acd6a5ef42f86c9fbd2078",
+        "ciphertext_sha256": "061ab7e7d3b73063bc35ef643b565e0f3ec4e97a012bac0d9379e0af007106e8"
+      },
+      {
+        "party_id": "party-b",
+        "submission_sha256": "bc6ee9a886bca7cc58af112c96cf73fdb121dd557b398c52a5bea3c9ed609728",
+        "ciphertext_sha256": "edb926345a1520474f0d058d9a69108ecd36c82bff848a296878dff19ca87bd7"
+      },
+      {
+        "party_id": "party-c",
+        "submission_sha256": "a137508edf2f7183c4f28fb8a5a0d95d2d4f2725fffff650bc90a5fc1cfee531",
+        "ciphertext_sha256": "c199bc3b090b5aae309d88f790067342798376c09c3c4b6c688ca1f52cafec38"
+      }
+    ]
+  },
+  "partial": {
+    "schema_version": "2.0",
+    "party_id": "party-a",
+    "request_sha256": "1f58b9145b24d108d7ac38887338b3ea3229833b9c1e418250343f907bfd1047",
+    "aggregate_sha256": "ee3c65b5c7f4dd0ebed8bf046725e273e3eeed3c6776b0667b9deb6432f6c3ea",
+    "epoch_sha256": "afc9b31d9f3f3645ae563606e1ddbe4b0e72b247e3bc9dff6251f5ee8961ae48",
+    "role": "lead",
+    "decision": "APPROVE",
+    "approved_at": "2026-09-05T10:10:00Z",
+    "partial_sha256": "722d992bfdc80bfad1a8abdf60644681fed4ae8cbba0db3e41d5570ab8b72951",
+    "partial_size": 100
+  },
+  "acknowledgement": {
+    "schema_version": "2.0",
+    "run_id": "synthetic-run",
+    "party_id": "party-a",
+    "object_sha256": "2958d416d08aa5a472d7b509036cb7eafd542add84527e66a145ea64cb4cdc75",
+    "accepted_at": "2026-09-05T10:01:00Z"
+  },
+  "rejection": {
+    "schema_version": "2.0",
+    "run_id": "synthetic-run",
+    "party_id": "party-a",
+    "request_sha256": "1f58b9145b24d108d7ac38887338b3ea3229833b9c1e418250343f907bfd1047",
+    "decision": "REJECT",
+    "rejected_at": "2026-09-05T10:01:00Z",
+    "reason_code": "OPERATOR_DECLINED"
+  }
+}

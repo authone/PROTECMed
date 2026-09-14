@@ -1,0 +1,16 @@
+{
+  "schema_version": "2.0",
+  "mapping_id": "iocn-csi-v2",
+  "sheet": "Date - craniospinal irradiation",
+  "fields": {
+    "diagnosis": "Diagnostic",
+    "rt_technique": "Tehnica RT2",
+    "toxicity_wbc_ge2": "Toxicity >=2 WBC",
+    "age_at_rt": "Varsta radioterapie ",
+    "surgery_type": "Tip chirurgie"
+  },
+  "default_formula_mode": "literal-only",
+  "reviewed_cache_mode": "reviewed-cached-values",
+  "local_row_cap": 10000,
+  "external_link_refresh": false
+}

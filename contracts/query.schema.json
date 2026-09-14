@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "query",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "query_id": {
+      "enum": [
+        "Q001",
+        "Q002",
+        "Q003",
+        "Q004",
+        "Q005",
+        "Q006"
+      ]
+    },
+    "query_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "logic": {
+      "const": "AND"
+    },
+    "filters": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 5,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "field": {
+                "const": "diagnosis"
+              },
+              "operator": {
+                "const": "eq"
+              },
+              "value": {
+                "enum": [
+                  "MBL",
+                  "PNET",
+                  "GLIOMA",
+                  "HAEMA",
+                  "ICGCT",
+                  "PINEAL TUMOR",
+                  "EPD"
+                ]
+              }
+            },
+            "required": [
+              "field",
+              "operator",
+              "value"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "field": {
+                "const": "rt_technique"
+              },
+              "operator": {
+                "const": "eq"
+              },
+              "value": {
+                "enum": [
+                  "IMRT",
+                  "3DCRT"
+                ]
+              }
+            },
+            "required": [
+              "field",
+              "operator",
+              "value"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "field": {
+                "const": "surgery_type"
+              },
+              "operator": {
+                "const": "eq"
+              },
+              "value": {
+                "enum": [
+                  "GTR",
+                  "STR",
+                  "INOP",
+                  "BIOPSIE"
+                ]
+              }
+            },
+            "required": [
+              "field",
+              "operator",
+              "value"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "field": {
+                "const": "toxicity_wbc_ge2"
+              },
+              "operator": {
+                "const": "eq"
+              },
+              "value": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "field",
+              "operator",
+              "value"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "field": {
+                "const": "age_at_rt"
+              },
+              "operator": {
+                "const": "lt"
+              },
+              "value": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 120
+              }
+            },
+            "required": [
+              "field",
+              "operator",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "missing_value_policy": {
+      "const": "exclude_required_missing"
+    }
+  },
+  "required": [
+    "schema_version",
+    "query_id",
+    "query_version",
+    "logic",
+    "filters",
+    "missing_value_policy"
+  ],
+  "additionalProperties": false
+}

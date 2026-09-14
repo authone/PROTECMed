@@ -1,0 +1,77 @@
+{
+  "provenance": "Invented 24-row fixture, not sampled from IOCN",
+  "counts": {
+    "Q001": {
+      "total": 24,
+      "two_parties": [
+        12,
+        12
+      ],
+      "three_parties": [
+        8,
+        8,
+        8
+      ]
+    },
+    "Q002": {
+      "total": 12,
+      "two_parties": [
+        12,
+        0
+      ],
+      "three_parties": [
+        4,
+        4,
+        4
+      ]
+    },
+    "Q003": {
+      "total": 8,
+      "two_parties": [
+        8,
+        0
+      ],
+      "three_parties": [
+        0,
+        4,
+        4
+      ]
+    },
+    "Q004": {
+      "total": 5,
+      "two_parties": [
+        5,
+        0
+      ],
+      "three_parties": [
+        0,
+        3,
+        2
+      ]
+    },
+    "Q005": {
+      "total": 3,
+      "two_parties": [
+        3,
+        0
+      ],
+      "three_parties": [
+        2,
+        1,
+        0
+      ]
+    },
+    "Q006": {
+      "total": 8,
+      "two_parties": [
+        8,
+        0
+      ],
+      "three_parties": [
+        0,
+        4,
+        4
+      ]
+    }
+  }
+}

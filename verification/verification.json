@@ -1,0 +1,75 @@
+{
+  "package_version": "2.0",
+  "review_date": "2026-09-05",
+  "python": "3.13.5",
+  "dependencies": {
+    "cryptography": "46.0.4",
+    "jsonschema": "4.26.0",
+    "defusedxml": "0.7.1"
+  },
+  "checks": [
+    {
+      "name": "Python synthetic/reference unit tests",
+      "status": "PASS",
+      "tests": 57,
+      "evidence": "python_reference_tests.txt",
+      "scope": "No OpenFHE or service execution"
+    },
+    {
+      "name": "JSON Schema self-checks and structural examples",
+      "status": "PASS",
+      "evidence": "Included in Python tests"
+    },
+    {
+      "name": "Independent IOCN cached-value query regression",
+      "status": "PASS",
+      "queries": 6,
+      "two_and_three_way_splits": true,
+      "patient_rows_exported": false
+    },
+    {
+      "name": "Saved formula cache freshness",
+      "status": "NOT_VERIFIABLE_FROM_FILE",
+      "note": "No Excel recalculation or clinical review performed here"
+    },
+    {
+      "name": "C++ OpenFHE smoke compilation/execution",
+      "status": "NOT_RUN",
+      "reason": "OpenFHE unavailable; direct network checkout failed"
+    },
+    {
+      "name": "Cross-process OpenFHE integration",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "Docker builds and service/browser tests",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "Windows/macOS and mixed-architecture deployment",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "Clinical pilot, security audit and TRL assessment",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "DOCX rendering and visual review",
+      "status": "PASS",
+      "blueprint_pages": 34,
+      "handover_pages": 2,
+      "scope": "Both DOCX files rendered; every page visually inspected",
+      "renderer": "DOCX skill render_docx.py; LibreOffice/PDF rasterization"
+    },
+    {
+      "name": "Package link/integrity checks",
+      "status": "PASS",
+      "json_files_parsed": 18,
+      "yaml_syntax": "PASS_NOT_DOCKER_RUNTIME",
+      "local_markdown_links": "PASS",
+      "word_internal_navigation": "12 links target existing bookmarks",
+      "markdown_parity": "Standalone Markdown equals packaged blueprint",
+      "scope": "File-level checks; not a production implementation test"
+    }
+  ]
+}

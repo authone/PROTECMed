@@ -1,0 +1,109 @@
+{
+  "schema_version": "2.0",
+  "module_id": "cohort-count-local-v2",
+  "queries": [
+    {
+      "schema_version": "2.0",
+      "query_id": "Q001",
+      "query_version": 1,
+      "logic": "AND",
+      "filters": [],
+      "missing_value_policy": "exclude_required_missing"
+    },
+    {
+      "schema_version": "2.0",
+      "query_id": "Q002",
+      "query_version": 1,
+      "logic": "AND",
+      "filters": [
+        {
+          "field": "diagnosis",
+          "operator": "eq",
+          "value": "MBL"
+        }
+      ],
+      "missing_value_policy": "exclude_required_missing"
+    },
+    {
+      "schema_version": "2.0",
+      "query_id": "Q003",
+      "query_version": 1,
+      "logic": "AND",
+      "filters": [
+        {
+          "field": "diagnosis",
+          "operator": "eq",
+          "value": "MBL"
+        },
+        {
+          "field": "rt_technique",
+          "operator": "eq",
+          "value": "IMRT"
+        }
+      ],
+      "missing_value_policy": "exclude_required_missing"
+    },
+    {
+      "schema_version": "2.0",
+      "query_id": "Q004",
+      "query_version": 1,
+      "logic": "AND",
+      "filters": [
+        {
+          "field": "diagnosis",
+          "operator": "eq",
+          "value": "MBL"
+        },
+        {
+          "field": "rt_technique",
+          "operator": "eq",
+          "value": "IMRT"
+        },
+        {
+          "field": "toxicity_wbc_ge2",
+          "operator": "eq",
+          "value": true
+        }
+      ],
+      "missing_value_policy": "exclude_required_missing"
+    },
+    {
+      "schema_version": "2.0",
+      "query_id": "Q005",
+      "query_version": 1,
+      "logic": "AND",
+      "filters": [
+        {
+          "field": "age_at_rt",
+          "operator": "lt",
+          "value": 12
+        },
+        {
+          "field": "diagnosis",
+          "operator": "eq",
+          "value": "MBL"
+        }
+      ],
+      "missing_value_policy": "exclude_required_missing"
+    },
+    {
+      "schema_version": "2.0",
+      "query_id": "Q006",
+      "query_version": 1,
+      "logic": "AND",
+      "filters": [
+        {
+          "field": "surgery_type",
+          "operator": "eq",
+          "value": "GTR"
+        },
+        {
+          "field": "rt_technique",
+          "operator": "eq",
+          "value": "IMRT"
+        }
+      ],
+      "missing_value_policy": "exclude_required_missing"
+    }
+  ]
+}

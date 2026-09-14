@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "envelope",
+  "type": "object",
+  "properties": {
+    "signer_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,63}$"
+    },
+    "purpose": {
+      "enum": [
+        "run-plan",
+        "plan-acceptance",
+        "key-round",
+        "epoch-manifest",
+        "epoch-confirmation",
+        "encrypted-count",
+        "input-set",
+        "decryption-request",
+        "partial",
+        "rejection"
+      ]
+    },
+    "payload": {
+      "type": "object"
+    },
+    "signature_b64": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9+/]{86}==$"
+    }
+  },
+  "required": [
+    "signer_id",
+    "purpose",
+    "payload",
+    "signature_b64"
+  ],
+  "additionalProperties": false
+}

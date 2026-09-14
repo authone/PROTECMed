@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "run-plan",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "study_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,63}$"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,63}$"
+    },
+    "party_count": {
+      "enum": [
+        2,
+        3
+      ]
+    },
+    "threshold": {
+      "enum": [
+        2,
+        3
+      ]
+    },
+    "roster": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "properties": {
+          "party_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,63}$"
+          },
+          "identity_key_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "snapshot_token": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,63}$"
+          }
+        },
+        "required": [
+          "party_id",
+          "identity_key_sha256",
+          "snapshot_token"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "lead_party": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,63}$"
+    },
+    "recipient_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9-]{0,63}$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "query_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "mapping_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "profile_id": {
+      "const": "bgv-count-nofn-v2"
+    },
+    "module_id": {
+      "const": "cohort-count-local-v2"
+    },
+    "local_row_cap": {
+      "const": 10000
+    },
+    "release_policy_id": {
+      "const": "exact-count-restricted-demo-v1"
+    }
+  },
+  "required": [
+    "schema_version",
+    "study_id",
+    "run_id",
+    "party_count",
+    "threshold",
+    "roster",
+    "lead_party",
+    "recipient_ids",
+    "query_sha256",
+    "mapping_sha256",
+    "profile_id",
+    "module_id",
+    "local_row_cap",
+    "release_policy_id"
+  ],
+  "additionalProperties": false
+}

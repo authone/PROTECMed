@@ -1,0 +1,26 @@
+{
+  "schema_version": "2.0",
+  "profile_id": "bgv-count-nofn-v2",
+  "openfhe_tag": "v1.5.1",
+  "scheme": "BGVRNS",
+  "plaintext_modulus": 65537,
+  "multiplicative_depth": 0,
+  "allowed_party_counts": [
+    2,
+    3
+  ],
+  "threshold_num_of_parties": "must_equal_run_roster_size",
+  "security_level": "HEStd_128_classic",
+  "multiparty_mode": "NOISE_FLOODING_MULTIPARTY",
+  "scaling_technique": "FLEXIBLEAUTOEXT",
+  "key_switch_technique": "BV",
+  "digit_size": 10,
+  "secret_key_dist": "UNIFORM_TERNARY",
+  "eval_add_count": 5,
+  "key_switch_count": 0,
+  "local_row_cap": 10000,
+  "max_aggregate": 30000,
+  "max_outputs_per_epoch": 1,
+  "ring_dimension": "automatic",
+  "verification_status": "SOURCE_REVIEWED_NOT_COMPILED"
+}

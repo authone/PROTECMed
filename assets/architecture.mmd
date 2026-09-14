@@ -1,0 +1,13 @@
+flowchart TB
+  A[Provider A: local data, count, share, human approval]
+  B[Provider B: local data, count, share, human approval]
+  C[Provider C: only for 3/3]
+  O[Coordinator: signed public artifacts, EvalAdd, all-party fusion]
+  R[Authorized exact aggregate]
+  A -->|encrypted count and approved lead partial| O
+  B -->|encrypted count and approved main partial| O
+  C -->|encrypted count and approved main partial| O
+  O -.->|complete input set and immutable request, fetched by provider| A
+  O -.->|complete input set and immutable request, fetched by provider| B
+  O -.->|complete input set and immutable request, fetched by provider| C
+  O -->|only after exact n-party gate| R

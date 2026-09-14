@@ -1,0 +1,78 @@
+{
+  "classification": "RESTRICTED_AGGREGATE_REGRESSION",
+  "source": "Supplied IOCN workbook; saved formula results; admitted-row modulo split",
+  "counts": {
+    "Q001": {
+      "total": 51,
+      "two_parties": [
+        26,
+        25
+      ],
+      "three_parties": [
+        17,
+        17,
+        17
+      ]
+    },
+    "Q002": {
+      "total": 29,
+      "two_parties": [
+        14,
+        15
+      ],
+      "three_parties": [
+        8,
+        11,
+        10
+      ]
+    },
+    "Q003": {
+      "total": 13,
+      "two_parties": [
+        6,
+        7
+      ],
+      "three_parties": [
+        3,
+        4,
+        6
+      ]
+    },
+    "Q004": {
+      "total": 11,
+      "two_parties": [
+        5,
+        6
+      ],
+      "three_parties": [
+        3,
+        2,
+        6
+      ]
+    },
+    "Q005": {
+      "total": 21,
+      "two_parties": [
+        8,
+        13
+      ],
+      "three_parties": [
+        5,
+        7,
+        9
+      ]
+    },
+    "Q006": {
+      "total": 9,
+      "two_parties": [
+        4,
+        5
+      ],
+      "three_parties": [
+        3,
+        3,
+        3
+      ]
+    }
+  }
+}

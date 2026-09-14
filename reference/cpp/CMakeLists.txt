@@ -1,0 +1,27 @@
+# Source-informed template, NOT configured/compiled in this delivery.
+cmake_minimum_required(VERSION 3.16.3)
+project(protecmed_count_smoke LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+find_package(OpenFHE CONFIG REQUIRED)
+if(NOT DEFINED BASE_OPENFHE_VERSION OR NOT BASE_OPENFHE_VERSION VERSION_EQUAL "1.5.1")
+    message(FATAL_ERROR "Expected OpenFHE 1.5.1; inspect the pinned install/config")
+endif()
+if(NOT OpenFHE_NATIVE_SIZE EQUAL 64)
+    message(FATAL_ERROR "This baseline requires OpenFHE native size 64")
+endif()
+# Same exported variable family as upstream v1.5.1 CMakeLists.User.txt.
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenFHE_CXX_FLAGS}")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenFHE_EXE_LINKER_FLAGS}")
+include_directories(${OPENMP_INCLUDES} ${OpenFHE_INCLUDE}
+    ${OpenFHE_INCLUDE}/third-party/include ${OpenFHE_INCLUDE}/core
+    ${OpenFHE_INCLUDE}/pke ${OpenFHE_INCLUDE}/binfhe)
+link_directories(${OpenFHE_LIBDIR})
+if(UNIX AND NOT APPLE)
+    add_link_options(-Wl,--no-as-needed)
+endif()
+add_executable(count_smoke count_smoke.cpp)
+target_link_libraries(count_smoke PRIVATE ${OpenFHE_SHARED_LIBRARIES})
+enable_testing()
+add_test(NAME smoke_two_parties COMMAND count_smoke 2)
+add_test(NAME smoke_three_parties COMMAND count_smoke 3)
