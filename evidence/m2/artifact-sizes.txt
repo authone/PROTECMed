@@ -1,0 +1,22 @@
+# Measured M2 artifact sizes in bytes (binary serialization, linux/arm64)
+{
+  "n=2": {
+    "context": 675,
+    "public_key_final": 525651,
+    "private_share": 263043,
+    "input_ciphertext": 525999,
+    "aggregate_ciphertext": 525999,
+    "partial": 263399
+  },
+  "n=3": {
+    "context": 675,
+    "public_key_final": 525651,
+    "private_share": 263043,
+    "input_ciphertext": 525999,
+    "aggregate_ciphertext": 525999,
+    "partial": 263399
+  }
+}
+
+# largest single artifact: 525999 bytes (0.50 MiB)
+# blueprint 5.6 provisional streaming limit: 16 MiB -> comfortable

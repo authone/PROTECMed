@@ -1,0 +1,173 @@
+### threshold-fhe
+
+=================RUNNING FOR BGVrns - Additive =====================
+p = 65537
+n = 8192
+log2 q = 169.088
+Running key generation (used for source data)...
+
+ Original Plaintext: 
+
+(1, 1, 1, 1, 1, 1, 1, ... )
+(1, 0, 0, 1, 1, ... )
+(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, ... )
+
+ Resulting Fused Plaintext adding 3 ciphertexts: 
+
+(3, 3, 4, 6, 7, 7, 8, 8, 9, 10, ... )
+
+
+=================RUNNING FOR BFVrns=====================
+p = 65537
+n = 16384
+log2 q = 300
+Running key generation (used for source data)...
+Round 1 (party A) started.
+Round 1 of key generation completed.
+Round 2 (party B) started.
+Joint public key for (s_a + s_b) is generated...
+Joint evaluation multiplication key for (s_a + s_b) is generated...
+Joint evaluation multiplication key (s_a + s_b) is transformed into s_b*(s_a + s_b)...
+Joint evaluation summation key for (s_a + s_b) is generated...
+Round 2 of key generation completed.
+Round 3 (party A) started.
+Joint key (s_a + s_b) is transformed into s_a*(s_a + s_b)...
+Computing the final evaluation multiplication key for (s_a + s_b)*(s_a + s_b)...
+Round 3 of key generation completed.
+
+ Original Plaintext: 
+
+(1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1, ... )
+(1, 0, 0, 1, 1, ... )
+(2, 2, 3, 4, 5, 6, 7, 8, 9, 10, ... )
+
+ Resulting Fused Plaintext: 
+
+(4, 4, 6, 9, 11, 12, 12, 12, 12, 12, 1, ... )
+
+
+ Resulting Fused Plaintext after Multiplication of plaintexts 1 and 3: 
+
+(2, 4, 9, 16, 25, 36, 35, 32, 27, 20, ... )
+
+
+ Fused result after summation of ciphertext 3: 
+
+(56, 54, 52, 49, 45, 40, 34, 27, 19, 10, ... )
+
+=================RUNNING FOR CKKS=====================
+p = 50
+n = 16384
+log2 q = 229.087
+Running key generation (used for source data)...
+Round 1 (party A) started.
+Round 1 of key generation completed.
+Round 2 (party B) started.
+Joint public key for (s_a + s_b) is generated...
+Joint evaluation multiplication key for (s_a + s_b) is generated...
+Joint evaluation multiplication key (s_a + s_b) is transformed into s_b*(s_a + s_b)...
+Joint evaluation summation key for (s_a + s_b) is generated...
+Round 2 of key generation completed.
+Round 3 (party A) started.
+Joint key (s_a + s_b) is transformed into s_a*(s_a + s_b)...
+Computing the final evaluation multiplication key for (s_a + s_b)*(s_a + s_b)...
+Round 3 of key generation completed.
+
+ Original Plaintext: 
+
+(1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1, ... ); Estimated precision: 50 bits
+
+(1, 0, 0, 1, 1, ... ); Estimated precision: 50 bits
+
+(2, 2, 3, 4, 5, 6, 7, 8, 9, 10, ... ); Estimated precision: 50 bits
+
+
+ Resulting Fused Plaintext: 
+
+(4, 4, 6, 9, 11, 12, 12, 12, 12, 12, 1, 2.6645353e-14, ... ); Estimated precision: 43 bits
+
+
+
+ Resulting Fused Plaintext after Multiplication of plaintexts 1 and 3: 
+
+(2, 4, 9, 16, 25, 36, 35, 32, 27, 20, -8.3844043e-13, 1.4814816e-12, ... ); Estimated precision: 39 bits
+
+
+
+ Fused result after the Summation of ciphertext 3: 
+
+(56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, ... ); Estimated precision: 43 bits
+
+exit=0
+### threshold-fhe-5p
+
+=================RUNNING FOR BFVrns=====================
+p = 65537
+n = 8192
+log2 q = 180
+Running key generation (used for source data)...
+Round 1 (party A) started.
+Running evalsum key generation (used for source data)...
+
+ Original Plaintext: 
+
+(1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1, ... )
+(1, 0, 0, 1, 1, ... )
+(2, 2, 3, 4, 5, 6, 7, 8, 9, 10, ... )
+
+ Resulting Fused Plaintext: 
+
+(4, 4, 6, 9, 11, 12, 12, 12, 12, 12, 1, ... )
+
+
+ Resulting Fused Plaintext after Multiplication of plaintexts 1 and 3: 
+
+(1, 32, 243, 1024, 3125, 7776, 3125, 1024, 243, 32, 1, ... )
+
+
+ Fused result after summation of ciphertext 3: 
+
+(56, 54, 52, 49, 45, 40, 34, 27, 19, 10, ... )
+exit=0
+### simple-integers-serial-bgvrns
+This program requres the subdirectory `demoData' to exist, otherwise you will get an error writing serializations.
+
+The cryptocontext has been generated.
+Error writing serialization of the crypto context to cryptocontext.txt
+exit=1
+### simple-integers-serial-bgvrns (rerun with demoData)
+This program requres the subdirectory `demoData' to exist, otherwise you will get an error writing serializations.
+
+The cryptocontext has been generated.
+The cryptocontext has been serialized.
+The key pair has been generated.
+The public key has been serialized.
+The secret key has been serialized.
+The eval mult keys have been generated.
+The eval mult keys have been serialized.
+The rotation keys have been generated.
+The eval rotation keys have been serialized.
+Plaintext #1: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, ... )
+Plaintext #2: (3, 2, 1, 4, 5, 6, 7, 8, 9, 10, 11, 12, ... )
+Plaintext #3: (1, 2, 5, 2, 5, 6, 7, 8, 9, 10, 11, 12, ... )
+The plaintexts have been encrypted.
+The first ciphertext has been serialized.
+The second ciphertext has been serialized.
+The third ciphertext has been serialized.
+The cryptocontext has been deserialized.
+The public key has been deserialized.
+Deserialized the eval mult keys.
+Deserialized the eval rotation keys.
+The first ciphertext has been deserialized.
+The second ciphertext has been deserialized.
+The third ciphertext has been deserialized.
+The secret key has been deserialized.
+
+Results of homomorphic computations
+#1 + #2 + #3: (5, 6, 9, 10, 15, 18, 21, 24, 27, 30, 33, 36, ... )
+#1 * #2 * #3: (3, 8, 15, 32, 125, 216, 343, 512, 729, 1000, 1331, 1728, ... )
+Left rotation of #1 by 1: (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, ... )
+Left rotation of #1 by 2: (3, 4, 5, 6, 7, 8, 9, 10, 11, 12, ... )
+Right rotation of #1 by 1: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ... )
+Right rotation of #1 by 2: (0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, ... )
+exit=0

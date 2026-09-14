@@ -1,0 +1,697 @@
+-- Copied demoData files
+[  0%] Built target third-party
+[  1%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/lattice/constants-lattice-impl.cpp.o
+[  1%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/lattice/lattice.cpp.o
+[  2%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/lattice/stdlatticeparms.cpp.o
+[  2%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/lattice/trapdoor-dcrtpoly.cpp.o
+[  3%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/lattice/trapdoor-poly.cpp.o
+[  3%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/chebyshev.cpp.o
+[  4%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/dftransform.cpp.o
+[  4%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/discretegaussiangeneratorgeneric.cpp.o
+[  4%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/distributiongenerator.cpp.o
+[  5%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintdyn/be4-math-impl.cpp.o
+[  5%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintdyn/mubintvecdyn.cpp.o
+[  6%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintdyn/ubintdyn.cpp.o
+[  6%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintfxd/be2-math-impl.cpp.o
+[  7%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintfxd/mubintvecfxd.cpp.o
+[  7%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintfxd/ubintfxd.cpp.o
+[  7%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintntl/be6-math-impl.cpp.o
+[  8%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintntl/mubintvecntl.cpp.o
+[  8%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/bigintntl/ubintntl.cpp.o
+[  9%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/intnat/benative-math-impl.cpp.o
+[  9%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hal/intnat/mubintvecnat.cpp.o
+[ 10%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/hermite.cpp.o
+[ 10%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/matrix.cpp.o
+[ 11%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/math/nbtheory2.cpp.o
+[ 11%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/blockAllocator/blockAllocator.cpp.o
+[ 11%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/blockAllocator/xallocator.cpp.o
+[ 12%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/debug.cpp.o
+[ 12%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/demangle.cpp.o
+[ 13%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/get-call-stack.cpp.o
+[ 13%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/hashutil.cpp.o
+[ 14%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/inttypes.cpp.o
+[ 14%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/memory.cpp.o
+[ 14%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/openfhebase64.cpp.o
+[ 15%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/parallel.cpp.o
+[ 15%] Building C object src/core/CMakeFiles/coreobj.dir/lib/utils/prng/blake2b-ref.c.o
+[ 16%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/prng/blake2engine.cpp.o
+[ 16%] Building C object src/core/CMakeFiles/coreobj.dir/lib/utils/prng/blake2xb-ref.c.o
+[ 17%] Building CXX object src/core/CMakeFiles/coreobj.dir/lib/utils/utilities.cpp.o
+[ 17%] Built target coreobj
+[ 17%] Linking CXX shared library ../../lib/libOPENFHEcore.so
+[ 17%] Built target OPENFHEcore
+[ 18%] Building CXX object src/core/CMakeFiles/sampling.dir/examples/sampling.cpp.o
+[ 18%] Building CXX object src/core/CMakeFiles/external-prng.dir/examples/external-prng.cpp.o
+[ 18%] Linking CXX executable ../../bin/examples/core/external-prng
+[ 18%] Built target external-prng
+[ 18%] Building CXX object src/binfhe/CMakeFiles/binfheobj.dir/lib/binfhe-base-scheme.cpp.o
+[ 18%] Linking CXX executable ../../bin/examples/core/sampling
+[ 18%] Built target sampling
+[ 19%] Building CXX object src/binfhe/CMakeFiles/binfheobj.dir/lib/binfhe-constants-impl.cpp.o
+[ 19%] Building CXX object src/binfhe/CMakeFiles/binfheobj.dir/lib/binfhecontext.cpp.o
+[ 20%] Building CXX object src/binfhe/CMakeFiles/binfheobj.dir/lib/lwe-pke.cpp.o
+[ 20%] Building CXX object src/binfhe/CMakeFiles/binfheobj.dir/lib/rgsw-acc-cggi.cpp.o
+[ 21%] Building CXX object src/binfhe/CMakeFiles/binfheobj.dir/lib/rgsw-acc-dm.cpp.o
+[ 21%] Building CXX object src/binfhe/CMakeFiles/binfheobj.dir/lib/rgsw-acc-lmkcdey.cpp.o
+[ 21%] Building CXX object src/binfhe/CMakeFiles/binfheobj.dir/lib/rgsw-acc.cpp.o
+[ 22%] Building CXX object src/binfhe/CMakeFiles/binfheobj.dir/lib/rgsw-cryptoparameters.cpp.o
+[ 22%] Built target binfheobj
+[ 22%] Linking CXX shared library ../../lib/libOPENFHEbinfhe.so
+[ 22%] Built target OPENFHEbinfhe
+[ 22%] Building CXX object src/binfhe/CMakeFiles/boolean-ap.dir/examples/boolean-ap.cpp.o
+[ 22%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/ciphertext-impl.cpp.o
+[ 23%] Linking CXX executable ../../bin/examples/binfhe/boolean-ap
+[ 23%] Built target boolean-ap
+[ 24%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/constants-impl.cpp.o
+[ 25%] Building CXX object src/binfhe/CMakeFiles/boolean-lmkcdey.dir/examples/boolean-lmkcdey.cpp.o
+[ 25%] Linking CXX executable ../../bin/examples/binfhe/boolean-lmkcdey
+[ 25%] Built target boolean-lmkcdey
+[ 25%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/cryptocontext.cpp.o
+[ 26%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/cryptocontextfactory.cpp.o
+[ 26%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/cryptoobject-impl.cpp.o
+[ 27%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/encoding/ckkspackedencoding.cpp.o
+[ 28%] Building CXX object src/binfhe/CMakeFiles/boolean-multi-input.dir/examples/boolean-multi-input.cpp.o
+[ 28%] Linking CXX executable ../../bin/examples/binfhe/boolean-multi-input
+[ 28%] Built target boolean-multi-input
+[ 28%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/encoding/coefpackedencoding.cpp.o
+[ 28%] Building CXX object src/binfhe/CMakeFiles/boolean-serial-binary-dynamic-large-precision.dir/examples/boolean-serial-binary-dynamic-large-precision.cpp.o
+[ 29%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/encoding/encodingparams.cpp.o
+[ 29%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/encoding/packedencoding.cpp.o
+[ 29%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/encoding/stringencoding.cpp.o
+[ 30%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/globals-impl.cpp.o
+[ 30%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/key/evalkey.cpp.o
+[ 31%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/key/evalkeyrelin.cpp.o
+[ 31%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/key/privatekey.cpp.o
+[ 32%] Linking CXX executable ../../bin/examples/binfhe/boolean-serial-binary-dynamic-large-precision
+[ 32%] Built target boolean-serial-binary-dynamic-large-precision
+[ 33%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/key/publickey.cpp.o
+[ 34%] Building CXX object src/binfhe/CMakeFiles/boolean-serial-binary.dir/examples/boolean-serial-binary.cpp.o
+[ 34%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/keyswitch/keyswitch-base.cpp.o
+[ 34%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/keyswitch/keyswitch-bv.cpp.o
+[ 35%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/keyswitch/keyswitch-hybrid.cpp.o
+[ 35%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/bfvrns/bfvrns-cryptoparameters.cpp.o
+[ 35%] Linking CXX executable ../../bin/examples/binfhe/boolean-serial-binary
+[ 35%] Built target boolean-serial-binary
+[ 36%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/bfvrns/bfvrns-leveledshe.cpp.o
+[ 36%] Building CXX object src/binfhe/CMakeFiles/boolean-serial-json-dynamic-large-precision.dir/examples/boolean-serial-json-dynamic-large-precision.cpp.o
+[ 36%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/bfvrns/bfvrns-multiparty.cpp.o
+[ 37%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/bfvrns/bfvrns-parametergeneration.cpp.o
+[ 37%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/bfvrns/bfvrns-pke.cpp.o
+[ 38%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/bfvrns/bfvrns-scheme.cpp.o
+[ 38%] Linking CXX executable ../../bin/examples/binfhe/boolean-serial-json-dynamic-large-precision
+[ 38%] Built target boolean-serial-json-dynamic-large-precision
+[ 38%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/bgvrns/bgvrns-cryptoparameters.cpp.o
+[ 38%] Building CXX object src/binfhe/CMakeFiles/boolean-serial-json.dir/examples/boolean-serial-json.cpp.o
+[ 38%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/bgvrns/bgvrns-leveledshe.cpp.o
+[ 39%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/bgvrns/bgvrns-multiparty.cpp.o
+[ 39%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/bgvrns/bgvrns-parametergeneration.cpp.o
+[ 40%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/bgvrns/bgvrns-pke.cpp.o
+[ 40%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/bgvrns/bgvrns-scheme.cpp.o
+[ 41%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/ckksrns/ckksrns-advancedshe.cpp.o
+[ 42%] Linking CXX executable ../../bin/examples/binfhe/boolean-serial-json
+[ 42%] Built target boolean-serial-json
+[ 42%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/ckksrns/ckksrns-cryptoparameters.cpp.o
+[ 43%] Building CXX object src/binfhe/CMakeFiles/boolean-truth-tables.dir/examples/boolean-truth-tables.cpp.o
+[ 43%] Linking CXX executable ../../bin/examples/binfhe/boolean-truth-tables
+[ 43%] Built target boolean-truth-tables
+[ 43%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/ckksrns/ckksrns-fhe.cpp.o
+[ 43%] Building CXX object src/binfhe/CMakeFiles/boolean.dir/examples/boolean.cpp.o
+[ 44%] Linking CXX executable ../../bin/examples/binfhe/boolean
+[ 44%] Built target boolean
+[ 45%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/ckksrns/ckksrns-leveledshe.cpp.o
+[ 46%] Building CXX object src/binfhe/CMakeFiles/eval-decomp.dir/examples/eval-decomp.cpp.o
+[ 46%] Linking CXX executable ../../bin/examples/binfhe/eval-decomp
+[ 46%] Built target eval-decomp
+[ 46%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/ckksrns/ckksrns-multiparty.cpp.o
+[ 47%] Building CXX object src/binfhe/CMakeFiles/eval-flooring.dir/examples/eval-flooring.cpp.o
+[ 48%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/ckksrns/ckksrns-parametergeneration.cpp.o
+[ 48%] Linking CXX executable ../../bin/examples/binfhe/eval-flooring
+[ 48%] Built target eval-flooring
+[ 48%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/ckksrns/ckksrns-pke.cpp.o
+[ 48%] Building CXX object src/binfhe/CMakeFiles/eval-function.dir/examples/eval-function.cpp.o
+[ 49%] Linking CXX executable ../../bin/examples/binfhe/eval-function
+[ 49%] Built target eval-function
+[ 50%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/ckksrns/ckksrns-scheme.cpp.o
+[ 50%] Building CXX object src/binfhe/CMakeFiles/eval-sign.dir/examples/eval-sign.cpp.o
+[ 51%] Linking CXX executable ../../bin/examples/binfhe/eval-sign
+[ 51%] Built target eval-sign
+[ 51%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/ckksrns/ckksrns-schemeswitching.cpp.o
+[ 51%] Building CXX object src/binfhe/CMakeFiles/boolean-ap-pke.dir/examples/pke/boolean-ap-pke.cpp.o
+[ 51%] Linking CXX executable ../../bin/examples/binfhe/pke/boolean-ap-pke
+[ 51%] Built target boolean-ap-pke
+[ 52%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/ckksrns/ckksrns-utils.cpp.o
+[ 53%] Building CXX object src/binfhe/CMakeFiles/boolean-pke.dir/examples/pke/boolean-pke.cpp.o
+[ 53%] Linking CXX executable ../../bin/examples/binfhe/pke/boolean-pke
+[ 53%] Built target boolean-pke
+[ 53%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/gen-cryptocontext-params-impl.cpp.o
+[ 53%] Building CXX object src/binfhe/CMakeFiles/boolean-serial-binary-pke.dir/examples/pke/boolean-serial-binary-pke.cpp.o
+[ 53%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/gen-cryptocontext-params-validation.cpp.o
+[ 54%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/scheme-id-impl.cpp.o
+[ 54%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/scheme/scheme-swch-params.cpp.o
+[ 55%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemebase/base-advancedshe.cpp.o
+[ 55%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemebase/base-cryptoparameters.cpp.o
+[ 56%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemebase/base-fhe.cpp.o
+[ 56%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemebase/base-leveledshe.cpp.o
+[ 57%] Linking CXX executable ../../bin/examples/binfhe/pke/boolean-serial-binary-pke
+[ 57%] Built target boolean-serial-binary-pke
+[ 58%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemebase/base-multiparty.cpp.o
+[ 59%] Building CXX object src/binfhe/CMakeFiles/boolean-serial-json-pke.dir/examples/pke/boolean-serial-json-pke.cpp.o
+[ 59%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemebase/base-parametergeneration.cpp.o
+[ 59%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemebase/base-pke.cpp.o
+[ 60%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemebase/base-pre.cpp.o
+[ 60%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemebase/base-scheme.cpp.o
+[ 60%] Linking CXX executable ../../bin/examples/binfhe/pke/boolean-serial-json-pke
+[ 61%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemebase/rlwe-cryptoparameters-impl.cpp.o
+[ 61%] Built target boolean-serial-json-pke
+[ 61%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemelet/rlwe-mp.cpp.o
+[ 62%] Building CXX object src/binfhe/CMakeFiles/boolean-truth-tables-pke.dir/examples/pke/boolean-truth-tables-pke.cpp.o
+[ 62%] Linking CXX executable ../../bin/examples/binfhe/pke/boolean-truth-tables-pke
+[ 62%] Built target boolean-truth-tables-pke
+[ 63%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemerns/rns-cryptoparameters.cpp.o
+[ 63%] Building CXX object src/binfhe/CMakeFiles/eval-flooring-pke.dir/examples/pke/eval-flooring-pke.cpp.o
+[ 64%] Linking CXX executable ../../bin/examples/binfhe/pke/eval-flooring-pke
+[ 64%] Built target eval-flooring-pke
+[ 64%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemerns/rns-leveledshe.cpp.o
+[ 64%] Building CXX object src/binfhe/CMakeFiles/eval-function-pke.dir/examples/pke/eval-function-pke.cpp.o
+[ 65%] Linking CXX executable ../../bin/examples/binfhe/pke/eval-function-pke
+[ 65%] Built target eval-function-pke
+[ 65%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemerns/rns-multiparty.cpp.o
+[ 66%] Building CXX object src/pke/CMakeFiles/pkeobj.dir/lib/schemerns/rns-pke.cpp.o
+[ 66%] Built target pkeobj
+[ 67%] Linking CXX shared library ../../lib/libOPENFHEpke.so
+[ 67%] Built target OPENFHEpke
+[ 67%] Building CXX object src/pke/CMakeFiles/advanced-ckks-bootstrapping.dir/examples/advanced-ckks-bootstrapping.cpp.o
+[ 67%] Building CXX object src/pke/CMakeFiles/advanced-real-numbers-128.dir/examples/advanced-real-numbers-128.cpp.o
+[ 68%] Linking CXX executable ../../bin/examples/pke/advanced-ckks-bootstrapping
+[ 68%] Built target advanced-ckks-bootstrapping
+[ 68%] Building CXX object src/pke/CMakeFiles/advanced-real-numbers.dir/examples/advanced-real-numbers.cpp.o
+[ 68%] Linking CXX executable ../../bin/examples/pke/advanced-real-numbers-128
+[ 68%] Built target advanced-real-numbers-128
+[ 69%] Building CXX object src/pke/CMakeFiles/ckks-noise-flooding.dir/examples/ckks-noise-flooding.cpp.o
+[ 69%] Linking CXX executable ../../bin/examples/pke/ckks-noise-flooding
+[ 69%] Built target ckks-noise-flooding
+[ 69%] Building CXX object src/pke/CMakeFiles/depth-bfvrns-behz.dir/examples/depth-bfvrns-behz.cpp.o
+[ 70%] Linking CXX executable ../../bin/examples/pke/advanced-real-numbers
+[ 70%] Built target advanced-real-numbers
+[ 70%] Building CXX object src/pke/CMakeFiles/depth-bfvrns.dir/examples/depth-bfvrns.cpp.o
+[ 71%] Linking CXX executable ../../bin/examples/pke/depth-bfvrns
+[ 71%] Linking CXX executable ../../bin/examples/pke/depth-bfvrns-behz
+[ 71%] Built target depth-bfvrns
+[ 72%] Building CXX object src/pke/CMakeFiles/depth-bgvrns.dir/examples/depth-bgvrns.cpp.o
+[ 72%] Built target depth-bfvrns-behz
+[ 73%] Building CXX object src/pke/CMakeFiles/function-evaluation.dir/examples/function-evaluation.cpp.o
+[ 73%] Linking CXX executable ../../bin/examples/pke/function-evaluation
+[ 73%] Built target function-evaluation
+[ 74%] Building CXX object src/pke/CMakeFiles/functional-bootstrapping-ckks.dir/examples/functional-bootstrapping-ckks.cpp.o
+[ 74%] Linking CXX executable ../../bin/examples/pke/depth-bgvrns
+[ 74%] Built target depth-bgvrns
+[ 75%] Building CXX object src/pke/CMakeFiles/inner-product.dir/examples/inner-product.cpp.o
+[ 75%] Linking CXX executable ../../bin/examples/pke/inner-product
+[ 75%] Built target inner-product
+[ 76%] Building CXX object src/pke/CMakeFiles/interactive-bootstrapping.dir/examples/interactive-bootstrapping.cpp.o
+[ 76%] Linking CXX executable ../../bin/examples/pke/functional-bootstrapping-ckks
+[ 76%] Built target functional-bootstrapping-ckks
+[ 76%] Building CXX object src/pke/CMakeFiles/iterative-ckks-bootstrapping-composite-scaling.dir/examples/iterative-ckks-bootstrapping-composite-scaling.cpp.o
+[ 76%] Linking CXX executable ../../bin/examples/pke/interactive-bootstrapping
+[ 76%] Built target interactive-bootstrapping
+[ 76%] Building CXX object src/pke/CMakeFiles/iterative-ckks-bootstrapping.dir/examples/iterative-ckks-bootstrapping.cpp.o
+[ 77%] Linking CXX executable ../../bin/examples/pke/iterative-ckks-bootstrapping-composite-scaling
+[ 77%] Built target iterative-ckks-bootstrapping-composite-scaling
+[ 77%] Building CXX object src/pke/CMakeFiles/linearwsum-evaluation.dir/examples/linearwsum-evaluation.cpp.o
+[ 78%] Linking CXX executable ../../bin/examples/pke/iterative-ckks-bootstrapping
+[ 78%] Built target iterative-ckks-bootstrapping
+[ 78%] Building CXX object src/pke/CMakeFiles/polynomial-evaluation-high-precision-composite-scaling.dir/examples/polynomial-evaluation-high-precision-composite-scaling.cpp.o
+[ 79%] Linking CXX executable ../../bin/examples/pke/linearwsum-evaluation
+[ 79%] Built target linearwsum-evaluation
+[ 79%] Building CXX object src/pke/CMakeFiles/polynomial-evaluation.dir/examples/polynomial-evaluation.cpp.o
+[ 80%] Linking CXX executable ../../bin/examples/pke/polynomial-evaluation-high-precision-composite-scaling
+[ 80%] Built target polynomial-evaluation-high-precision-composite-scaling
+[ 80%] Building CXX object src/pke/CMakeFiles/pre-buffer.dir/examples/pre-buffer.cpp.o
+[ 81%] Linking CXX executable ../../bin/examples/pke/polynomial-evaluation
+[ 81%] Built target polynomial-evaluation
+[ 81%] Building CXX object src/pke/CMakeFiles/pre-hra-secure.dir/examples/pre-hra-secure.cpp.o
+[ 82%] Linking CXX executable ../../bin/examples/pke/pre-buffer
+[ 82%] Built target pre-buffer
+[ 83%] Building CXX object src/pke/CMakeFiles/rotation.dir/examples/rotation.cpp.o
+[ 83%] Linking CXX executable ../../bin/examples/pke/pre-hra-secure
+[ 83%] Built target pre-hra-secure
+[ 83%] Building CXX object src/pke/CMakeFiles/scheme-switching-serial.dir/examples/scheme-switching-serial.cpp.o
+[ 83%] Linking CXX executable ../../bin/examples/pke/rotation
+[ 83%] Built target rotation
+[ 84%] Building CXX object src/pke/CMakeFiles/scheme-switching-serial.dir/unittest/utils/schemeswitching-data-serializer.cpp.o
+[ 85%] Building CXX object src/pke/CMakeFiles/scheme-switching.dir/examples/scheme-switching.cpp.o
+[ 85%] Linking CXX executable ../../bin/examples/pke/scheme-switching
+[ 85%] Built target scheme-switching
+[ 86%] Building CXX object src/pke/CMakeFiles/simple-ckks-bootstrapping-composite-scaling.dir/examples/simple-ckks-bootstrapping-composite-scaling.cpp.o
+[ 86%] Linking CXX executable ../../bin/examples/pke/scheme-switching-serial
+[ 86%] Built target scheme-switching-serial
+[ 87%] Building CXX object src/pke/CMakeFiles/simple-ckks-bootstrapping.dir/examples/simple-ckks-bootstrapping.cpp.o
+[ 87%] Linking CXX executable ../../bin/examples/pke/simple-ckks-bootstrapping-composite-scaling
+[ 87%] Built target simple-ckks-bootstrapping-composite-scaling
+[ 88%] Building CXX object src/pke/CMakeFiles/simple-complex-numbers.dir/examples/simple-complex-numbers.cpp.o
+[ 88%] Linking CXX executable ../../bin/examples/pke/simple-ckks-bootstrapping
+[ 88%] Built target simple-ckks-bootstrapping
+[ 88%] Building CXX object src/pke/CMakeFiles/simple-composite-scaling-manual.dir/examples/simple-composite-scaling-manual.cpp.o
+[ 89%] Linking CXX executable ../../bin/examples/pke/simple-composite-scaling-manual
+[ 89%] Built target simple-composite-scaling-manual
+[ 89%] Building CXX object src/pke/CMakeFiles/simple-integers-bgvrns.dir/examples/simple-integers-bgvrns.cpp.o
+[ 89%] Linking CXX executable ../../bin/examples/pke/simple-complex-numbers
+[ 89%] Built target simple-complex-numbers
+[ 90%] Building CXX object src/pke/CMakeFiles/simple-integers-serial-bgvrns.dir/examples/simple-integers-serial-bgvrns.cpp.o
+[ 91%] Linking CXX executable ../../bin/examples/pke/simple-integers-bgvrns
+[ 91%] Built target simple-integers-bgvrns
+[ 91%] Building CXX object src/pke/CMakeFiles/simple-integers-serial.dir/examples/simple-integers-serial.cpp.o
+[ 91%] Linking CXX executable ../../bin/examples/pke/simple-integers-serial-bgvrns
+[ 91%] Built target simple-integers-serial-bgvrns
+[ 91%] Building CXX object src/pke/CMakeFiles/simple-integers.dir/examples/simple-integers.cpp.o
+[ 92%] Linking CXX executable ../../bin/examples/pke/simple-integers
+[ 92%] Built target simple-integers
+[ 93%] Building CXX object src/pke/CMakeFiles/simple-real-numbers-composite-scaling.dir/examples/simple-real-numbers-composite-scaling.cpp.o
+[ 93%] Linking CXX executable ../../bin/examples/pke/simple-integers-serial
+[ 93%] Built target simple-integers-serial
+[ 94%] Building CXX object src/pke/CMakeFiles/simple-real-numbers-serial.dir/examples/simple-real-numbers-serial.cpp.o
+[ 94%] Linking CXX executable ../../bin/examples/pke/simple-real-numbers-composite-scaling
+[ 94%] Built target simple-real-numbers-composite-scaling
+[ 95%] Building CXX object src/pke/CMakeFiles/simple-real-numbers.dir/examples/simple-real-numbers.cpp.o
+[ 95%] Linking CXX executable ../../bin/examples/pke/simple-real-numbers
+[ 95%] Built target simple-real-numbers
+[ 95%] Building CXX object src/pke/CMakeFiles/tckks-interactive-mp-bootstrapping-Chebyshev.dir/examples/tckks-interactive-mp-bootstrapping-Chebyshev.cpp.o
+[ 96%] Linking CXX executable ../../bin/examples/pke/tckks-interactive-mp-bootstrapping-Chebyshev
+[ 96%] Built target tckks-interactive-mp-bootstrapping-Chebyshev
+[ 96%] Building CXX object src/pke/CMakeFiles/tckks-interactive-mp-bootstrapping.dir/examples/tckks-interactive-mp-bootstrapping.cpp.o
+[ 97%] Linking CXX executable ../../bin/examples/pke/tckks-interactive-mp-bootstrapping
+[ 97%] Built target tckks-interactive-mp-bootstrapping
+[ 97%] Building CXX object src/pke/CMakeFiles/threshold-fhe-5p.dir/examples/threshold-fhe-5p.cpp.o
+[ 98%] Linking CXX executable ../../bin/examples/pke/threshold-fhe-5p
+[ 98%] Linking CXX executable ../../bin/examples/pke/simple-real-numbers-serial
+[ 98%] Built target threshold-fhe-5p
+[ 98%] Building CXX object src/pke/CMakeFiles/threshold-fhe.dir/examples/threshold-fhe.cpp.o
+[ 98%] Built target simple-real-numbers-serial
+[100%] Linking CXX executable ../../bin/examples/pke/threshold-fhe
+[100%] Built target threshold-fhe
+-- Install configuration: "Release"
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/config_core.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/version.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/complex.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/atomic.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/memory.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/valarray.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/polymorphic.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/set.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/queue.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/variant.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/functional.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/stack.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/unordered_map.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/deque.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/base_class.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/chrono.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/boost_variant.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/tuple.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/utility.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/optional.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/vector.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/concepts
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/concepts/pair_associative_container.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/common.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/string.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/unordered_set.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/forward_list.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/map.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/bitset.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/list.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/types/array.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/base64.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/fwd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/memorybuffer.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/filewritestream.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/pointer.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/allocators.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/encodings.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/prettywriter.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/document.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/encodedstream.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/writer.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/msinttypes
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/msinttypes/stdint.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/msinttypes/inttypes.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/msinttypes/LICENSE
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/stringbuffer.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/filereadstream.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/rapidjson.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/memorystream.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/stream.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/reader.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/ostreamwrapper.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/istreamwrapper.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/LICENSE
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/internal
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/internal/stack.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/internal/ieee754.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/internal/strtod.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/internal/diyfp.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/internal/swap.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/internal/regex.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/internal/pow10.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/internal/strfunc.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/internal/dtoa.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/internal/itoa.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/internal/meta.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/internal/biginteger.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/schema.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/error
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/error/error.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/error/en.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidjson/cursorstreamwrapper.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/LICENSE
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidxml
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidxml/license.txt
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidxml/rapidxml.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidxml/rapidxml_utils.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidxml/rapidxml_iterators.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidxml/rapidxml_print.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/external/rapidxml/manual.html
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/details
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/details/polymorphic_impl.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/details/traits.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/details/static_object.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/details/helpers.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/details/polymorphic_impl_fwd.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/details/util.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/specialize.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/cereal.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/access.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/archives
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/archives/xml.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/archives/json.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/archives/portable_binary.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/archives/binary.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/archives/adapters.hpp
+-- Installing: <REPO>/.local/openfhe/include/openfhe/cereal/macros.hpp
+-- Installing: <REPO>/.local/openfhe/lib/libOPENFHEcore.so.1.5.1
+-- Installing: <REPO>/.local/openfhe/lib/libOPENFHEcore.so.1
+-- Installing: <REPO>/.local/openfhe/lib/libOPENFHEcore.so
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/nbtheory-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/math-hal.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/SAMPLING_README.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/math_backends.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/chebyshev.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/nbtheory.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/matrixstrassen-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/discretegaussiangenerator.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/binaryuniformgenerator.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/binaryuniformgenerator-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/ternaryuniformgenerator.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/matrixstrassen.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/dftransform.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/discretegaussiangeneratorgeneric.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintfxd
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintfxd/transformfxd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintfxd/backendfxd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintfxd/mubintvecfxd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintfxd/ubintfxd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintfxd/transformfxd-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/intnat
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/intnat/ubintnat.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/intnat/mubintvecnat.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/intnat/transformnat.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/intnat/transformnat-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintdyn
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintdyn/ubintdyn.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintdyn/backenddyn.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintdyn/transformdyn-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintdyn/mubintvecdyn.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintdyn/transformdyn.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintntl
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintntl/mubintvecntl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintntl/backendntl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintntl/transformntl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintntl/transformntl-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintntl/ubintntl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/transform.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/bigintbackend.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/nativeintbackend.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/vector.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/basicint.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hal/integer.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/matrix.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/distrgen.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/distributiongenerator.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/hermite.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/matrix-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/README.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/discretegaussiangenerator-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/discreteuniformgenerator-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/discreteuniformgenerator.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/math/ternaryuniformgenerator-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/version.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/testdefs.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/openfhebase64.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/type_name.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/memory.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/sertype.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/serializable.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/caller_info.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/exception.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/get-call-stack.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/utilities-int.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/inttypes.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/serial.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/prng
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/prng/prng.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/prng/blake2.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/prng/blake2engine.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/prng/CPPLINT.cfg
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/prng/README.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/prng/blake2-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/hashutil.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/blockAllocator
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/blockAllocator/xallocator.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/blockAllocator/xmap.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/blockAllocator/xqueue.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/blockAllocator/xsstream.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/blockAllocator/stl_allocator.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/blockAllocator/xvector.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/blockAllocator/blockAllocator.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/blockAllocator/xstring.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/blockAllocator/README.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/blockAllocator/xset.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/blockAllocator/xlist.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/README.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/parallel.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/debug.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/demangle.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/utils/utilities.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/matrix-lattice-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/ilelement.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/trapdoor-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/field2n-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/lat-hal.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/trapdoorparameters.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/hal
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/hal/default
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/hal/default/poly-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/hal/default/ildcrtparams.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/hal/default/dcrtpoly.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/hal/default/poly.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/hal/default/dcrtpoly-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/hal/default/ilparams.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/hal/lat-backend.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/hal/poly-interface.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/hal/elemparams.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/hal/dcrtpoly-interface.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/hal/README.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/README.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/dgsampling.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/trapdoor.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/dgsampling-impl.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/constants-lattice.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/field2n.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/lattice/stdlatticeparms.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/openfhecore.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/core/README.md
+-- Installing: <REPO>/.local/openfhe/lib/libOPENFHEpke.so.1.5.1
+-- Installing: <REPO>/.local/openfhe/lib/libOPENFHEpke.so.1
+-- Set non-toolchain portion of runtime path of "<REPO>/.local/openfhe/lib/libOPENFHEpke.so.1.5.1" to ""
+-- Installing: <REPO>/.local/openfhe/lib/libOPENFHEpke.so
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/constants-defs.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/cryptocontextfactory.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/key
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/key/key.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/key/privatekey-fwd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/key/key-ser.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/key/publickey-fwd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/key/evalkeyrelin-fwd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/key/publickey.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/key/evalkey-fwd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/key/evalkeyrelin.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/key/evalkey.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/key/README.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/key/privatekey.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/key/keypair.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/constants.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/cryptoobject.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/metadata-ser.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemebase
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemebase/base-pre.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemebase/base-leveledshe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemebase/base-multiparty.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemebase/base-cryptoparameters.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemebase/base-ser.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemebase/base-advancedshe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemebase/base-scheme.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemebase/base-parametergeneration.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemebase/decrypt-result.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemebase/base-fhe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemebase/rlwe-cryptoparameters.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemebase/base-pke.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/cryptocontext-fwd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/keyswitch
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/keyswitch/keyswitch-base.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/keyswitch/keyswitch-hybrid.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/keyswitch/keyswitch-rns.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/keyswitch/README.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/keyswitch/keyswitch-bv.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/metadata.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemelet
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemelet/rlwe-mp.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/cryptocontext-ser.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/globals.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/ciphertext.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/ciphertext-fwd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/gen-cryptocontext-params-defaults.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/gen-cryptocontext-params.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/scheme-swch-params.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/scheme-utils.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/gen-cryptocontext-params-validation.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/README.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/ckksrns-utils.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/ckksrns-leveledshe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/ckksrns-pke.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/gen-cryptocontext-ckksrns-internal.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/ckksrns-multiparty.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/ckksrns-ser.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/ckksrns-fhe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/ckksrns-pre.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/ckksrns-scheme.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/ckksrns-parametergeneration.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/ckksrns-cryptoparameters.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/ckksrns-schemeswitching.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/README.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/gen-cryptocontext-ckksrns-params.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/ckksrns-advancedshe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/ckksrns/gen-cryptocontext-ckksrns.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bgvrns
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bgvrns/gen-cryptocontext-bgvrns.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bgvrns/bgvrns-scheme.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bgvrns/bgvrns-leveledshe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bgvrns/bgvrns-multiparty.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bgvrns/bgvrns-parametergeneration.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bgvrns/bgvrns-pre.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bgvrns/bgvrns-advancedshe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bgvrns/bgvrns-ser.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bgvrns/gen-cryptocontext-bgvrns-internal.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bgvrns/gen-cryptocontext-bgvrns-params.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bgvrns/bgvrns-pke.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bgvrns/bgvrns-cryptoparameters.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bgvrns/bgvrns-fhe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/scheme-id.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bfvrns
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bfvrns/bfvrns-leveledshe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bfvrns/bfvrns-cryptoparameters.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bfvrns/gen-cryptocontext-bfvrns-internal.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bfvrns/gen-cryptocontext-bfvrns-params.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bfvrns/bfvrns-ser.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bfvrns/bfvrns-fhe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bfvrns/bfvrns-pke.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bfvrns/bfvrns-multiparty.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bfvrns/bfvrns-parametergeneration.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bfvrns/bfvrns-scheme.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bfvrns/gen-cryptocontext-bfvrns.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bfvrns/bfvrns-advancedshe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/scheme/bfvrns/bfvrns-pre.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/encoding
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/encoding/ckkspackedencoding.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/encoding/encodings.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/encoding/plaintext.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/encoding/plaintext-fwd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/encoding/encodingparams.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/encoding/README.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/encoding/stringencoding.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/encoding/plaintextfactory.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/encoding/packedencoding.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/encoding/coefpackedencoding.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/cryptocontext.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/ciphertext-ser.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/README.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/gen-cryptocontext.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/openfhe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemerns
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemerns/rns-pre.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemerns/rns-scheme.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemerns/rns-ser.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemerns/rns-parametergeneration.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemerns/rns-leveledshe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemerns/rns-cryptoparameters.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemerns/rns-fhe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemerns/rns-advancedshe.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemerns/rns-modulus-limits.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemerns/rns-multiparty.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/schemerns/rns-pke.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/unittest/utils
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/unittest/utils/UnitTestCryptoContext.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/unittest/utils/UnitTestMetadataTest.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/unittest/utils/UnitTestReadCSVData.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/unittest/utils/schemeswitching-data-serializer.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/unittest/utils/BaseTestCase.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/unittest/utils/UnitTestException.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/unittest/utils/UnitTestMetadataTestSer.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/unittest/utils/UnitTestSer.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/unittest/utils/UnitTestUtils.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/pke/unittest/utils/UnitTestCCParams.h
+-- Installing: <REPO>/.local/openfhe/lib/libOPENFHEbinfhe.so.1.5.1
+-- Installing: <REPO>/.local/openfhe/lib/libOPENFHEbinfhe.so.1
+-- Set non-toolchain portion of runtime path of "<REPO>/.local/openfhe/lib/libOPENFHEbinfhe.so.1.5.1" to ""
+-- Installing: <REPO>/.local/openfhe/lib/libOPENFHEbinfhe.so
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/rgsw-acckey.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/rgsw-acc-lmkcdey.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/lwe-keyswitchkey-fwd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/rgsw-evalkey.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/lwe-publickey.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/binfhecontext-ser.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/lwe-ciphertext-fwd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/binfhe-base-params.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/lwe-publickey-fwd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/binfhecontext.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/rgsw-acc-cggi.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/rgsw-acc-dm.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/binfhe-constants.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/lwe-privatekey-fwd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/rgsw-cryptoparameters.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/lwe-cryptoparameters.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/README.md
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/rgsw-acc.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/rlwe-ciphertext.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/binfhe-base-scheme.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/lwe-pke.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/lwe-privatekey.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/lwe-ciphertext.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/lwe-keyswitchkey.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/lwe-keypair-fwd.h
+-- Installing: <REPO>/.local/openfhe/include/openfhe/binfhe/lwe-keypair.h
+-- Installing: <REPO>/.local/openfhe/lib/OpenFHE/OpenFHEConfig.cmake
+-- Installing: <REPO>/.local/openfhe/lib/OpenFHE/OpenFHEConfigVersion.cmake
+-- Installing: <REPO>/.local/openfhe/lib/OpenFHE/OpenFHETargets.cmake
+-- Installing: <REPO>/.local/openfhe/lib/OpenFHE/OpenFHETargets-release.cmake

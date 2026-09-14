@@ -1,0 +1,2 @@
+# Party-agent local data layer (M1). Pin exactly; review before changing.
+openpyxl==3.1.5

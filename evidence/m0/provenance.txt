@@ -1,0 +1,20 @@
+# M0 pinned upstream provenance
+recorded_utc: 2026-09-14T20:12:22Z
+repo: https://github.com/openfheorg/openfhe-development.git
+tag: v1.5.1
+head_commit: 1306d14f8c26bb6150d3e6ad54f28dfe1007689e
+describe: v1.5.1
+
+## submodules (recursive)
+ 984e3f194862b17916536b5fade40cba6e47a6fe third-party/cereal (heads/main)
+ eddb0241389718a23a42db6af5f0164b6e0139af third-party/google-benchmark (v1.9.4)
+ 52eb8108c5bdec04579160ae17225d66034bd723 third-party/google-test (release-1.8.0-3544-g52eb8108)
+ 83edb60836d87cf1b406e8846b9059c03031e8f5 third-party/gperftools (gperftools-2.16.90)
+
+## toolchain
+uname: Linux 7.0.12+kali-arm64 aarch64
+distro: Kali GNU/Linux Rolling
+g++: g++ (Debian 15.3.0-2) 15.3.0
+cmake: cmake version 4.4.3 (pip-installed in .local/toolchain, no system cmake available)
+cpus: 2
+mem_total: 7.7Gi

@@ -1,0 +1,227 @@
+{
+  "record": "milestone execution ledger",
+  "note": "Separate from verification.json, which is the frozen 2026-09-05 delivery ledger for the documentation/reference package. Entries here are gate executions performed after delivery. NOT_RUN is never overwritten on the basis of plausible-looking source.",
+  "milestones": [
+    {
+      "gate": "M0",
+      "title": "Reproducible upstream build",
+      "status": "PASS",
+      "date": "2026-09-14",
+      "host": "linux/arm64 (aarch64), Kali rolling, g++ 15.3.0, CMake 4.4.3 (pip, user prefix)",
+      "openfhe": {
+        "tag": "v1.5.1",
+        "commit": "1306d14f8c26bb6150d3e6ad54f28dfe1007689e",
+        "submodules": {
+          "third-party/cereal": "984e3f194862b17916536b5fade40cba6e47a6fe",
+          "third-party/google-benchmark": "eddb0241389718a23a42db6af5f0164b6e0139af",
+          "third-party/google-test": "52eb8108c5bdec04579160ae17225d66034bd723",
+          "third-party/gperftools": "83edb60836d87cf1b406e8846b9059c03031e8f5"
+        },
+        "build_flags": "Release, NATIVE_SIZE=64, WITH_OPENMP=OFF, BUILD_EXAMPLES=ON, BUILD_UNITTESTS=OFF, BUILD_BENCHMARKS=OFF, MATHBACKEND=4"
+      },
+      "checks": [
+        {
+          "name": "Upstream threshold-fhe example",
+          "status": "PASS"
+        },
+        {
+          "name": "Upstream threshold-fhe-5p example",
+          "status": "PASS"
+        },
+        {
+          "name": "Upstream simple-integers-serial-bgvrns example",
+          "status": "PASS",
+          "note": "First run failed until demoData/ was created; both runs retained in the log"
+        },
+        {
+          "name": "count_smoke 2/2 exact sums",
+          "status": "PASS",
+          "results": [
+            11,
+            0,
+            20000
+          ]
+        },
+        {
+          "name": "count_smoke 3/3 exact sums",
+          "status": "PASS",
+          "results": [
+            11,
+            0,
+            30000
+          ]
+        },
+        {
+          "name": "Effective parameters recorded for n=2 and n=3",
+          "status": "PASS",
+          "ring_dimension": 8192,
+          "tower_count": 4,
+          "security_level": "HEStd_128_classic"
+        },
+        {
+          "name": "Profile getters survive binary context serialization across processes",
+          "status": "PASS",
+          "scope": "This pinned build only; not a general guarantee"
+        },
+        {
+          "name": "Benchmarks",
+          "status": "NOT_RUN",
+          "reason": "Not part of M0; no timing is claimed"
+        },
+        {
+          "name": "amd64 build and mixed-architecture exchange",
+          "status": "NOT_RUN"
+        },
+        {
+          "name": "Windows/macOS execution",
+          "status": "NOT_RUN"
+        },
+        {
+          "name": "Clinical data",
+          "status": "NOT_APPLICABLE",
+          "reason": "No clinical workbook exists in this workspace"
+        },
+        {
+          "name": "Cryptography-reviewer approval of effective parameters",
+          "status": "NOT_OBTAINED",
+          "reason": "Human decision, blueprint 7.4"
+        }
+      ],
+      "evidence": "evidence/m0/",
+      "report": "evidence/m0/M0_REPORT.md"
+    },
+    {
+      "gate": "M1",
+      "title": "Reference data semantics",
+      "status": "PASS",
+      "date": "2026-09-14",
+      "scope": "Plaintext local import, catalogue and snapshot semantics. No OpenFHE, service or clinical data.",
+      "checks": [
+        {
+          "name": "Python unit tests (mandated command)",
+          "status": "PASS",
+          "tests": 148,
+          "detail": "57 pre-existing reference tests + 91 new M1 tests; 0 failed, 0 skipped",
+          "evidence": "evidence/m1/unittest-full.txt"
+        },
+        {
+          "name": "Blueprint 3.6 required import cases",
+          "status": "PASS",
+          "cases": 14
+        },
+        {
+          "name": "Formula-cache modes and acknowledgement binding",
+          "status": "PASS"
+        },
+        {
+          "name": "Synthetic catalogue counts, totals and 2/3-way splits",
+          "status": "PASS",
+          "queries": 6
+        },
+        {
+          "name": "Equivalence with the frozen reference helper",
+          "status": "PASS"
+        },
+        {
+          "name": "Independent IOCN cached-value query regression",
+          "status": "NOT_RUN",
+          "reason": "No clinical workbook in this workspace; must be run on an authorized endpoint with reference/python/iocn_audit.py"
+        },
+        {
+          "name": "Import of files written by a real Excel version",
+          "status": "NOT_RUN",
+          "reason": "Fixtures are synthetic OOXML; openpyxl cannot write a formula plus a saved result"
+        },
+        {
+          "name": "IOCN confirmation of mapping and record/patient semantics",
+          "status": "NOT_OBTAINED",
+          "reason": "Human decision, blueprint 7.4 and 3.3"
+        }
+      ],
+      "new_dependency": "openpyxl==3.1.5 (services/party-agent/requirements.txt)",
+      "evidence": "evidence/m1/",
+      "report": "evidence/m1/M1_REPORT.md"
+    },
+    {
+      "gate": "M2",
+      "title": "Process-separated crypto",
+      "status": "PASS",
+      "date": "2026-09-14",
+      "scope": "Real OpenFHE worker in separate processes, per-party private directories. linux/arm64 only. No service, signature, approval or container behaviour.",
+      "checks": [
+        {
+          "name": "Python unit + integration tests (mandated command)",
+          "status": "PASS",
+          "tests": 180,
+          "detail": "57 reference + 91 M1 unit + 32 M2 integration; 0 failed, 0 skipped",
+          "evidence": "evidence/m2/unittest-full.txt"
+        },
+        {
+          "name": "Nine worker subcommands implemented",
+          "status": "PASS"
+        },
+        {
+          "name": "Positive 2/2 and 3/3 flows with exact sums",
+          "status": "PASS",
+          "results": {
+            "2of2": [
+              11,
+              0,
+              20000
+            ],
+            "3of3": [
+              11,
+              30000
+            ]
+          }
+        },
+        {
+          "name": "Wrong input, wrong aggregate, wrong key tag, missing and duplicate partial rejected",
+          "status": "PASS"
+        },
+        {
+          "name": "Filesystem rules (symlink, create-new, owner-only share directory)",
+          "status": "PASS"
+        },
+        {
+          "name": "Artifact sizes measured against the 5.6 provisional limits",
+          "status": "PASS",
+          "largest_bytes": 525999,
+          "evidence": "evidence/m2/artifact-sizes.txt"
+        },
+        {
+          "name": "Context object identifies an epoch",
+          "status": "FINDING_NEGATIVE",
+          "detail": "Same-profile contexts serialize byte-identically and are interchangeable; epoch identity must come from the signed plan and key tag (M3)"
+        },
+        {
+          "name": "Library refuses fusion with a wrong share",
+          "status": "FINDING_NEGATIVE",
+          "detail": "A share from another key chain fused to a plausible in-range integer 1419 for a true sum of 11, with no error. isValid and the range check are not authorization."
+        },
+        {
+          "name": "Benchmarks",
+          "status": "NOT_RUN",
+          "reason": "No timing methodology applied; no performance claim made"
+        },
+        {
+          "name": "amd64 build and mixed-architecture serialization exchange",
+          "status": "NOT_RUN"
+        },
+        {
+          "name": "Human approval before a partial",
+          "status": "NOT_RUN",
+          "reason": "M3; the worker produces a partial for anyone who can run it with a share"
+        },
+        {
+          "name": "Cryptography-reviewer approval of key and share handling",
+          "status": "NOT_OBTAINED",
+          "reason": "Human decision, blueprint 7.4"
+        }
+      ],
+      "new_directory": "services/common/ (shared worker client; not named in the 5.1 layout)",
+      "evidence": "evidence/m2/",
+      "report": "evidence/m2/M2_REPORT.md"
+    }
+  ]
+}
