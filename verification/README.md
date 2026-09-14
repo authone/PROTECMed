@@ -26,6 +26,12 @@ reference package. Gate executions performed after that date are recorded separa
   rather than hidden: a same-profile context does not identify an epoch, and fusion with
   a wrong share returned a plausible in-range integer. Report: `evidence/m2/M2_REPORT.md`.
 
+- **M3 — signed immutable protocol: PASS (2026-09-14).** Run plans, key rounds, epoch
+  confirmations, submissions, input sets, decryption requests, the local approval gate and
+  the coordinator all-party fusion gate, driven end-to-end against the real worker; 274
+  tests pass in total. Six tests assert that fusion is never invoked when a share,
+  approval or signature is missing. Report: `evidence/m3/M3_REPORT.md`.
+
 The C++/OpenFHE entries in `verification.json` were NOT RUN at delivery and were not
 edited; `milestones.json` records that M0 has since executed them. Everything else there
 — services, containers, Windows/macOS, clinical pilot — is still NOT RUN.

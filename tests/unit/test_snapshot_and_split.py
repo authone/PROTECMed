@@ -32,7 +32,8 @@ class SnapshotTests(unittest.TestCase):
     def test_token_is_opaque_and_not_derived_from_the_source_digest(self):
         first, second = make_snapshot(), make_snapshot()
         self.assertNotEqual(first.snapshot_token, second.snapshot_token)
-        self.assertEqual(len(first.snapshot_token), 32)
+        self.assertEqual(len(first.snapshot_token), 33)
+        self.assertTrue(first.snapshot_token.startswith("snap-"))
         self.assertNotIn(first.source_sha256, first.snapshot_token)
 
     def test_public_descriptor_leaks_no_count_and_no_source_digest(self):

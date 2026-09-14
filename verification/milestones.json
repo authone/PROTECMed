@@ -222,6 +222,80 @@
       "new_directory": "services/common/ (shared worker client; not named in the 5.1 layout)",
       "evidence": "evidence/m2/",
       "report": "evidence/m2/M2_REPORT.md"
+    },
+    {
+      "gate": "M3",
+      "title": "Signed immutable protocol",
+      "status": "PASS",
+      "date": "2026-09-14",
+      "scope": "Plans, key rounds, epoch confirmations, submissions, input sets, requests, local approval gate, exact partial set and fusion gate, driven end-to-end against the real M2 worker. No HTTP, database, container or clinical data.",
+      "checks": [
+        {
+          "name": "Python unit + integration tests (mandated command)",
+          "status": "PASS",
+          "tests": 274,
+          "detail": "57 reference + 151 unit + 66 integration; 0 failed, 0 skipped",
+          "evidence": "evidence/m3/unittest-full.txt"
+        },
+        {
+          "name": "Positive 2/2 and 3/3 signed releases",
+          "status": "PASS",
+          "aggregate": 11
+        },
+        {
+          "name": "No fusion call when a share, approval or signature is missing",
+          "status": "PASS",
+          "detail": "Six tests assert the worker fuse subcommand was invoked zero times"
+        },
+        {
+          "name": "No partial produced without an explicit local operator approval",
+          "status": "PASS"
+        },
+        {
+          "name": "Subset sum, substituted input and substituted aggregate rejected by local recomputation",
+          "status": "PASS"
+        },
+        {
+          "name": "Signed contract fixtures validate against the delivered schemas",
+          "status": "PASS",
+          "examples": 10
+        },
+        {
+          "name": "Idempotent submission, partial and fusion receipt",
+          "status": "PASS"
+        },
+        {
+          "name": "Integrity hold on authenticated conflicting messages",
+          "status": "PASS"
+        },
+        {
+          "name": "Tests against a fake worker",
+          "status": "NOT_APPLICABLE",
+          "reason": "Blueprint 7.1 permits a labelled fake worker for state-machine tests; the real worker was used instead"
+        },
+        {
+          "name": "HTTP, CSRF, session, TLS and database behaviour",
+          "status": "NOT_RUN",
+          "reason": "M4"
+        },
+        {
+          "name": "Crash recovery by killing a live process",
+          "status": "NOT_RUN",
+          "reason": "The uncertain-emission state is constructed directly rather than by a real crash"
+        },
+        {
+          "name": "Benchmarks, Docker, Windows/macOS, clinical data",
+          "status": "NOT_RUN"
+        },
+        {
+          "name": "Cryptography-reviewer approval of the approval gate",
+          "status": "NOT_OBTAINED",
+          "reason": "Human decision, blueprint 7.4"
+        }
+      ],
+      "corrective_change": "M1 snapshot tokens changed to 'snap-' + 28 hex so they satisfy the run-plan contract pattern ^[a-z][a-z0-9-]{0,63}$",
+      "evidence": "evidence/m3/",
+      "report": "evidence/m3/M3_REPORT.md"
     }
   ]
 }

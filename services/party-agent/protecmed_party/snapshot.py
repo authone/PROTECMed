@@ -11,6 +11,7 @@ would let the coordinator confirm guesses about the clinical file.
 from __future__ import annotations
 import json
 import os
+import re
 import secrets
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
@@ -20,7 +21,10 @@ from typing import Any
 from .canonical import FIELDS, assert_canonical
 from .errors import ImportRejected
 
-TOKEN_BYTES = 16
+# Opaque token shape, also the contract pattern for run-plan snapshot tokens.
+TOKEN_PATTERN = re.compile(r"^[a-z][a-z0-9-]{0,63}$")
+TOKEN_PREFIX = "snap-"
+TOKEN_BYTES = 14  # 112 bits; the prefix keeps the token inside the contract pattern
 
 
 @dataclass(frozen=True)
@@ -58,7 +62,7 @@ def freeze(records: list[dict[str, Any]], report: dict[str, Any], *, source_sha2
         raise ImportRejected("SNAPSHOT_HAS_INVALID_VALUES")
     frozen = [dict(row) for row in records]
     return Snapshot(
-        snapshot_token=secrets.token_hex(TOKEN_BYTES),
+        snapshot_token=TOKEN_PREFIX + secrets.token_hex(TOKEN_BYTES),
         created_utc=created_utc or now_utc(),
         source_sha256=source_sha256,
         mapping_id=mapping_id,
@@ -91,7 +95,7 @@ class SnapshotStore:
         os.chmod(self.directory, 0o700)
 
     def _path(self, token: str) -> Path:
-        if not (len(token) == TOKEN_BYTES * 2 and all(c in "0123456789abcdef" for c in token)):
+        if not TOKEN_PATTERN.fullmatch(token):
             raise ImportRejected("SNAPSHOT_TOKEN_FORMAT")
         return self.directory / f"snapshot-{token}.json"
 
