@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PROTECMed · {{ party_id }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="banner {{ 'clinical' if mode == 'clinical-validation' else 'demo' }}">
+    {{ mode_banner }} · {{ party_id }}
+  </header>
+  <nav>
+    <a href="/local/v2/import">1. Import si mapare</a>
+    <a href="/local/v2/run">2. Rulare si cheie</a>
+    <a href="/local/v2/request">3. Cerere de decriptare</a>
+  </nav>
+  <main>
+    {% if notice %}
+    <p class="notice notice-{{ 'ok' if notice == 'OK' else 'warn' }}">{{ notice }}</p>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer>
+    Datele pacientilor nu parasesc acest calculator. Numarul local este afisat doar aici.
+  </footer>
+</body>
+</html>

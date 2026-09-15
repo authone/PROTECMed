@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>2. Rulare, cheie si transmitere</h1>
+<dl>
+  <dt>Stare locala</dt><dd><code>{{ status.local_state }}</code></dd>
+  <dt>Stare rulare (coordonator)</dt><dd><code>{{ status.run_state or 'necunoscuta' }}</code></dd>
+  <dt>Au acceptat planul</dt><dd>{{ status.accepted_by | join(', ') or '-' }}</dd>
+  <dt>Au confirmat epoca</dt><dd>{{ status.confirmed_by | join(', ') or '-' }}</dd>
+  <dt>Au transmis</dt><dd>{{ status.submitted_by | join(', ') or '-' }}</dd>
+</dl>
+
+{% if status.local_count is not none %}
+<p class="local-count">Numar local calculat: <strong>{{ status.local_count }}</strong>
+  <span class="hint">(vizibil doar pe acest ecran; coordonatorul nu il primeste)</span></p>
+{% endif %}
+
+<div class="steps">
+  {% for route, label in [
+      ('accept-plan', 'Accepta planul rularii'),
+      ('key-round', 'Genereaza partea locala de cheie'),
+      ('confirm-epoch', 'Confirma epoca'),
+      ('prepare-count', 'Calculeaza numarul local'),
+      ('encrypt-submit', 'Cripteaza si transmite')] %}
+  <form method="post" action="/local/v2/{{ route }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <button type="submit">{{ label }}</button>
+  </form>
+  {% endfor %}
+</div>
+{% endblock %}

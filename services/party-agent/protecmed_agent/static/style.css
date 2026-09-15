@@ -1,0 +1,34 @@
+/* Local stylesheet only. No CDN, no external font, no analytics. */
+:root { --ink: #1c1c1c; --line: #d7d7d7; --warn: #8a5a00; --ok: #1d6b34; --bad: #a11; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.5 system-ui, sans-serif; color: var(--ink); background: #fbfbfb; }
+.banner { padding: .6rem 1rem; font-weight: 700; letter-spacing: .04em; color: #fff; }
+.banner.demo { background: #40566b; }
+.banner.clinical { background: #7a2020; }
+nav { display: flex; gap: 1rem; padding: .7rem 1rem; border-bottom: 1px solid var(--line); background: #fff; }
+nav a { color: var(--ink); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: 52rem; margin: 0 auto; padding: 1.2rem 1rem 3rem; }
+h1 { font-size: 1.4rem; } h2 { font-size: 1.1rem; margin-top: 1.6rem; }
+table { border-collapse: collapse; width: 100%; margin: .6rem 0; }
+th, td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid var(--line); }
+dl { display: grid; grid-template-columns: 16rem 1fr; gap: .2rem .8rem; }
+dt { color: #555; } dd { margin: 0; }
+label { display: block; margin: .6rem 0; }
+label.inline { display: flex; align-items: center; gap: .4rem; }
+button { padding: .45rem .9rem; border: 1px solid var(--line); border-radius: 4px;
+         background: #fff; cursor: pointer; font: inherit; }
+button.approve { border-color: var(--ok); color: var(--ok); }
+button.reject { border-color: var(--bad); color: var(--bad); }
+.steps, .decision { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+.notice { margin: 0 0 1rem; padding: .5rem .7rem; border: 1px solid var(--line);
+          border-left-width: 4px; border-radius: 3px; background: #fff; }
+.notice-ok { border-color: var(--ok); } .notice-warn { border-color: var(--warn); }
+.warning { padding: .7rem; border: 1px solid var(--warn); background: #fff8ec; }
+.local-count { padding: .5rem .7rem; border: 1px dashed var(--line); background: #fff; }
+.hint { color: #666; font-size: .9rem; }
+.checks { list-style: none; padding: 0; }
+.checks li::before { content: "OK  "; color: var(--ok); font-weight: 700; }
+.checks li.fail::before { content: "ESEC  "; color: var(--bad); }
+footer { border-top: 1px solid var(--line); padding: 1rem; color: #555; font-size: .9rem; }
+code { background: #f0f0f0; padding: .05rem .3rem; border-radius: 3px; }

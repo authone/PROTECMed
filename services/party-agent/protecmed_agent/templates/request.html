@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>3. Cerere de decriptare verificata</h1>
+
+{% if not verification %}
+<p>Nicio cerere verificata local.</p>
+<form method="post" action="/local/v2/review-request">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+  <button type="submit">Verifica cererea</button>
+</form>
+{% else %}
+<dl>
+  <dt>Interogare</dt><dd><code>{{ query.query_id }}</code> (din catalogul local aprobat)</dd>
+  <dt>Parti necesare</dt><dd>{{ verification.request.required_parties | join(', ') }}</dd>
+  <dt>Rolul acestei parti</dt><dd>{{ verification.role }}</dd>
+  <dt>Expira la</dt><dd>{{ verification.request.expires_at }}</dd>
+</dl>
+
+<h2>Verificari locale</h2>
+<ul class="checks">
+  {% for name, passed in verification.checks.items() %}
+  <li class="{{ 'pass' if passed else 'fail' }}">{{ name }}</li>
+  {% endfor %}
+</ul>
+
+{% if decision %}
+<p class="notice notice-ok">Decizie inregistrata: {{ decision }}</p>
+{% else %}
+<p class="warning">
+  Aprobarea autorizeaza aceasta divulgare. O contributie deja emisa
+  <strong>nu poate fi retrasa criptografic</strong>: expirarea sau inchiderea rularii nu
+  face acei octeti indecriptabili.
+</p>
+<div class="decision">
+  <form method="post" action="/local/v2/approve">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <button type="submit" class="approve">Aproba si emite partea de decriptare</button>
+  </form>
+  <form method="post" action="/local/v2/reject">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <input type="hidden" name="reason_code" value="OPERATOR_DECLINED">
+    <button type="submit" class="reject">Respinge</button>
+  </form>
+</div>
+{% endif %}
+{% endif %}
+{% endblock %}

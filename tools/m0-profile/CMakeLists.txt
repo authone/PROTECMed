@@ -1,0 +1,23 @@
+# M0 evidence tool. Mirrors the pinned-package linkage used by reference/cpp.
+cmake_minimum_required(VERSION 3.16.3)
+project(protecmed_m0_profile LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+find_package(OpenFHE CONFIG REQUIRED)
+if(NOT DEFINED BASE_OPENFHE_VERSION OR NOT BASE_OPENFHE_VERSION VERSION_EQUAL "1.5.1")
+    message(FATAL_ERROR "Expected OpenFHE 1.5.1; inspect the pinned install/config")
+endif()
+if(NOT OpenFHE_NATIVE_SIZE EQUAL 64)
+    message(FATAL_ERROR "This baseline requires OpenFHE native size 64")
+endif()
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenFHE_CXX_FLAGS}")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenFHE_EXE_LINKER_FLAGS}")
+include_directories(${OPENMP_INCLUDES} ${OpenFHE_INCLUDE}
+    ${OpenFHE_INCLUDE}/third-party/include ${OpenFHE_INCLUDE}/core
+    ${OpenFHE_INCLUDE}/pke ${OpenFHE_INCLUDE}/binfhe)
+link_directories(${OpenFHE_LIBDIR})
+if(UNIX AND NOT APPLE)
+    add_link_options(-Wl,--no-as-needed)
+endif()
+add_executable(profile_dump profile_dump.cpp)
+target_link_libraries(profile_dump PRIVATE ${OpenFHE_SHARED_LIBRARIES})
