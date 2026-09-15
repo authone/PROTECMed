@@ -1,2 +1,0 @@
-fuse with one approval : 400 {"detail":"PARTIAL_SET_INCOMPLETE"}
-fuse with both         : 200 {"request_sha256":"87c0497914d9331dbb5a5be1ae64c2f6bb5967b4b463d1fe0cad8f6b731a213e","aggregate":5,"fused_at":"2026-09-15T09:07:32Z","partial_sha256":["9748666b76820fcd55713c3b723cfe0483a542b7ef9c2bd02f4d903a7f17a930","23ce33da130a34c70b4d21bea8c570d26e1122faf753e429f4f9b243d9478603"]}

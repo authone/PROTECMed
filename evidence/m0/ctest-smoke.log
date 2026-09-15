@@ -1,9 +1,0 @@
-Test project <REPO>/build/smoke
-    Start 1: smoke_two_parties
-1/2 Test #1: smoke_two_parties ................   Passed    0.05 sec
-    Start 2: smoke_three_parties
-2/2 Test #2: smoke_three_parties ..............   Passed    0.07 sec
-
-100% tests passed out of 2
-
-Total Test time (real) =   0.12 sec

@@ -1,6 +1,0 @@
-fuse before party-b approves: 400 {'detail': 'PARTIAL_SET_INCOMPLETE'}
-b approve: /local/v2/request?notice=OK
-fuse after both approve: 200 {'request_sha256': '3e4cdbee44214a56217fe883147fabfa3cad568d93ce221f02509040623bc94f', 'aggregate': 5, 'fused_at': '2026-09-15T08:54:48Z', 'partial_sha256': ['9dfdd5a75de08fce5d72154ee3fcbd19de97ea9b7346bce872f2bad7ba4baf65', '2bab586fed84ccd8922b57df00995ebf3bcc3f8995ec068b115b1c3083f010dd']}
-result: 200 {'run_id': 'synthetic-run', 'state': 'REVEALED', 'released': True, 'aggregate': 5, 'fused_at': '2026-09-15T08:54:48Z'}
-evidence partial_binaries_included: False
-evidence decisions: [('party-a', 'APPROVE'), ('party-b', 'APPROVE')]
