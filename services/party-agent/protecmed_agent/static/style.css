@@ -21,7 +21,8 @@ button { padding: .45rem .9rem; border: 1px solid var(--line); border-radius: 4p
 button.approve { border-color: var(--ok); color: var(--ok); }
 button.reject { border-color: var(--bad); color: var(--bad); }
 .steps, .decision { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
-.notice { padding: .5rem .7rem; border-left: 4px solid var(--line); background: #fff; }
+.notice { margin: 0 0 1rem; padding: .5rem .7rem; border: 1px solid var(--line);
+          border-left-width: 4px; border-radius: 3px; background: #fff; }
 .notice-ok { border-color: var(--ok); } .notice-warn { border-color: var(--warn); }
 .warning { padding: .7rem; border: 1px solid var(--warn); background: #fff8ec; }
 .local-count { padding: .5rem .7rem; border: 1px dashed var(--line); background: #fff; }

@@ -15,8 +15,12 @@
     <a href="/local/v2/run">2. Rulare si cheie</a>
     <a href="/local/v2/request">3. Cerere de decriptare</a>
   </nav>
-  {% if notice %}<p class="notice notice-{{ 'ok' if notice == 'OK' else 'warn' }}">{{ notice }}</p>{% endif %}
-  <main>{% block content %}{% endblock %}</main>
+  <main>
+    {% if notice %}
+    <p class="notice notice-{{ 'ok' if notice == 'OK' else 'warn' }}">{{ notice }}</p>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
   <footer>
     Datele pacientilor nu parasesc acest calculator. Numarul local este afisat doar aici.
   </footer>

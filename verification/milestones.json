@@ -336,15 +336,15 @@
           "status": "PASS"
         },
         {
-          "name": "Manual browser walk-through of all three screens",
+          "name": "Browser verification of all three screens, with screenshots",
           "status": "PASS",
           "evidence": "evidence/m4/browser-verification.md",
-          "note": "One manual session against live loopback servers. No screenshot: the browser pane was not compositing, so screenshot calls timed out."
+          "note": "Real Chromium via Playwright against live loopback servers; eight screenshots in evidence/m4/screenshots/, reproducible with tools/ui-screenshots/capture.py"
         },
         {
           "name": "Automated browser test suite",
           "status": "NOT_RUN",
-          "reason": "No Playwright/Selenium installed; none was added"
+          "reason": "Playwright is installed as an evidence tool and the capture is reproducible, but no browser assertion runs in the unittest suite, so a rendered-UI regression would not fail CI"
         },
         {
           "name": "TLS, private CA and multi-machine transport",
@@ -375,7 +375,7 @@
           "reason": "Human decision, blueprint 7.4"
         }
       ],
-      "defect_found_and_fixed": "The demo launcher's banner was block-buffered when stdout was redirected, hiding party-b's URL, token and fingerprint. Found by running it for real; stdout is now line-buffered.",
+      "defect_found_and_fixed": "Two defects visible only in a rendered browser: the demo launcher's banner was block-buffered when stdout was redirected, hiding party-b's URL, token and fingerprint; and the notice bar rendered outside the page container, overflowing the viewport. Both fixed.",
       "evidence": "evidence/m4/",
       "report": "evidence/m4/M4_REPORT.md"
     }

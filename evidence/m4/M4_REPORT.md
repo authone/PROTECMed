@@ -75,25 +75,35 @@ approval resends the stored partial; 2-of-3 approvals do not release.
 Privacy: no local count appears in any stored envelope or audit row, and the count is
 rendered only on the provider's own authenticated screen.
 
-## Manual browser verification
-A real browser drove party-a end to end against live loopback servers: login, import,
+## Browser verification and screenshots
+A real Chromium drove party-a end to end against live loopback servers: login, import,
 plan acceptance, key round, epoch confirmation, local count, encrypted submission,
 request review and approval. Fusion was refused with one approval
-(`PARTIAL_SET_INCOMPLETE`) and released after both. Details in
-`evidence/m4/browser-verification.md`.
+(`PARTIAL_SET_INCOMPLETE`) and released after both.
 
-**No screenshot exists.** The browser pane was not compositing frames in this
-environment, so every `screenshot` call timed out; the evidence is the accessibility tree
-and rendered page text. This was one manual walk-through, not an automated browser suite.
+Eight screenshots are in `evidence/m4/screenshots/`, produced by
+`tools/ui-screenshots/capture.py`, which drives the shipped UI through Playwright against
+the system Chromium. Nothing is stubbed for the camera: real forms, real session cookies,
+real CSRF tokens, the real coordinator API and the real worker. The capture is
+reproducible, and `evidence/m4/browser-verification.md` describes each image.
 
-## Defect found and fixed during the browser session
-The launcher's banner was block-buffered when stdout was redirected, so an operator saw a
-truncated banner missing party-b's URL, token and fingerprint. `synthetic_demo.py` now
-line-buffers stdout. Found only by running it for real.
+This is **not** an automated browser test suite: no browser assertion runs as part of
+`python -m unittest discover -s tests`. Playwright is an evidence-tooling dependency and
+is deliberately not in any `services/*/requirements.txt`.
+
+## Defects found by running it for real
+1. The launcher's banner was block-buffered when stdout was redirected, so an operator
+   saw a truncated banner missing party-b's URL, token and fingerprint.
+   `synthetic_demo.py` now line-buffers stdout.
+2. The notice bar rendered outside the page container, spanning the full window and
+   overflowing the viewport edge. It now sits inside `main` at the page width.
+
+Neither was visible in the HTML assertions; both needed a rendered browser.
 
 ## Tests NOT run and why
-- **No automated browser suite.** No Playwright or Selenium is installed and none was
-  added. Browser evidence is one manual walk-through.
+- **No automated browser suite.** Playwright was installed as an evidence tool and the
+  screenshots are reproducible, but no browser assertion runs in the unittest suite. A
+  regression in the rendered UI would not fail CI.
 - **No real TLS, private CA or multi-machine transport.** Everything is loopback HTTP in
   one process tree. §4.8's HTTPS, pinned CA and `verify=False` prohibition are configured
   for D2 in M5/M6, not exercised here.
@@ -125,8 +135,9 @@ line-buffers stdout. Found only by running it for real.
 
 ## Evidence paths
 - `evidence/m4/unittest-full.txt` — full verbose run, 311 tests
-- `evidence/m4/browser-verification.md` — the manual browser walk-through
-- `evidence/m4/browser-release-transcript.txt` — live API responses for that release
+- `evidence/m4/browser-verification.md` — browser verification notes
+- `evidence/m4/screenshots/` — eight PNGs of the shipped UI plus `release.txt`
+- `evidence/m4/browser-release-transcript.txt` — live API responses from the first pass
 - `evidence/m4/demo-launcher-banner.txt` — launcher output, tokens redacted
 - `evidence/m4/M4_REPORT.md` — this report
 

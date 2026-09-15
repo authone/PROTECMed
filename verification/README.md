@@ -35,9 +35,9 @@ reference package. Gate executions performed after that date are recorded separa
 - **M4 — services and minimal UI: PASS (2026-09-15).** Coordinator FastAPI/SQLite service
   and party agent with three server-rendered Romanian screens, poller, import selector,
   transactions and immutable outbox; 311 tests pass, including 37 end-to-end tests over
-  real HTTP with CSRF, auth, rejection, offline and retry scenarios. One manual browser
-  walk-through is recorded; there is no automated browser suite and no screenshot.
-  Report: `evidence/m4/M4_REPORT.md`.
+  real HTTP with CSRF, auth, rejection, offline and retry scenarios. Browser verification with
+  eight screenshots of the shipped UI is recorded in `evidence/m4/screenshots/`, but no
+  browser assertion runs in the test suite. Report: `evidence/m4/M4_REPORT.md`.
 
 The C++/OpenFHE entries in `verification.json` were NOT RUN at delivery and were not
 edited; `milestones.json` records that M0 has since executed them. Everything else there
