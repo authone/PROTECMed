@@ -32,6 +32,13 @@ reference package. Gate executions performed after that date are recorded separa
   tests pass in total. Six tests assert that fusion is never invoked when a share,
   approval or signature is missing. Report: `evidence/m3/M3_REPORT.md`.
 
+- **M4 — services and minimal UI: PASS (2026-09-15).** Coordinator FastAPI/SQLite service
+  and party agent with three server-rendered Romanian screens, poller, import selector,
+  transactions and immutable outbox; 311 tests pass, including 37 end-to-end tests over
+  real HTTP with CSRF, auth, rejection, offline and retry scenarios. One manual browser
+  walk-through is recorded; there is no automated browser suite and no screenshot.
+  Report: `evidence/m4/M4_REPORT.md`.
+
 The C++/OpenFHE entries in `verification.json` were NOT RUN at delivery and were not
 edited; `milestones.json` records that M0 has since executed them. Everything else there
 — services, containers, Windows/macOS, clinical pilot — is still NOT RUN.

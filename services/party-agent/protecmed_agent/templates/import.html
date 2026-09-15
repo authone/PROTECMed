@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>1. Import si stare mapare</h1>
+<p>Mapare aprobata: <code>{{ mapping_id }}</code></p>
+
+<h2>Fisiere disponibile in directorul aprobat</h2>
+{% if files %}
+<form method="post" action="/local/v2/import">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+  <table>
+    <tr><th></th><th>Fisier</th><th>Dimensiune</th></tr>
+    {% for file in files %}
+    <tr>
+      <td><input type="radio" name="selection_token" value="{{ file.token }}" required></td>
+      <td>{{ file.name }}</td><td>{{ file.size }} B</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <label>Mod formule
+    <select name="import_mode">
+      <option value="literal-only">literal-only (implicit)</option>
+      <option value="reviewed-cached-values">reviewed-cached-values</option>
+    </select>
+  </label>
+  <label class="inline">
+    <input type="checkbox" name="acknowledge_cache"> Confirm ca IOCN a recalculat si salvat fisierul
+  </label>
+  <button type="submit">Importa si valideaza</button>
+</form>
+{% else %}
+<p class="notice notice-warn">Niciun fisier acceptat in directorul de import.</p>
+{% endif %}
+
+<h2>Stare validare</h2>
+{% if status.snapshot_token %}
+<dl>
+  <dt>Fisier</dt><dd>{{ status.file_name }}</dd>
+  <dt>Mod</dt><dd>{{ status.mode }}</dd>
+  <dt>Inregistrari admise</dt><dd>{{ status.admitted_rows }}</dd>
+  <dt>Randuri goale ignorate</dt><dd>{{ status.skipped_blank_rows }}</dd>
+  <dt>Celule cu formule selectate</dt><dd>{{ status.formula_cells }}</dd>
+  <dt>Parti externe (neactualizate)</dt><dd>{{ status.external_link_parts }}</dd>
+  <dt>Token instantaneu</dt><dd><code>{{ status.snapshot_token }}</code></dd>
+</dl>
+{% if status.formula_cells %}
+<p class="notice notice-warn">
+  Rezultatele salvate ale formulelor au fost acceptate pe baza confirmarii operatorului.
+  Prospetimea cache-ului nu poate fi stabilita din fisier.
+</p>
+{% endif %}
+{% else %}
+<p>Niciun instantaneu inghetat inca.</p>
+{% endif %}
+{% endblock %}

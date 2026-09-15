@@ -296,6 +296,88 @@
       "corrective_change": "M1 snapshot tokens changed to 'snap-' + 28 hex so they satisfy the run-plan contract pattern ^[a-z][a-z0-9-]{0,63}$",
       "evidence": "evidence/m3/",
       "report": "evidence/m3/M3_REPORT.md"
+    },
+    {
+      "gate": "M4",
+      "title": "Services and minimal UI",
+      "status": "PASS",
+      "date": "2026-09-15",
+      "scope": "Coordinator FastAPI/SQLite service, party agent service with three server-rendered screens, poller, import selector, transactions and immutable outbox. Loopback HTTP in one process tree; no TLS, Docker, container or clinical data.",
+      "checks": [
+        {
+          "name": "Python unit + integration + e2e tests (mandated command)",
+          "status": "PASS",
+          "tests": 311,
+          "detail": "57 reference + 151 unit + 66 integration + 37 end-to-end; 0 failed, 0 skipped",
+          "evidence": "evidence/m4/unittest-full.txt"
+        },
+        {
+          "name": "2/2 and 3/3 release driven through the local UI",
+          "status": "PASS"
+        },
+        {
+          "name": "Authentication, role and idempotency tests",
+          "status": "PASS"
+        },
+        {
+          "name": "CSRF, Origin, Host, cookie attribute and no-state-changing-GET tests",
+          "status": "PASS"
+        },
+        {
+          "name": "Rejection, offline and retry scenarios",
+          "status": "PASS"
+        },
+        {
+          "name": "No local count in any stored envelope or audit row",
+          "status": "PASS"
+        },
+        {
+          "name": "Evidence export excludes partial binaries",
+          "status": "PASS"
+        },
+        {
+          "name": "Manual browser walk-through of all three screens",
+          "status": "PASS",
+          "evidence": "evidence/m4/browser-verification.md",
+          "note": "One manual session against live loopback servers. No screenshot: the browser pane was not compositing, so screenshot calls timed out."
+        },
+        {
+          "name": "Automated browser test suite",
+          "status": "NOT_RUN",
+          "reason": "No Playwright/Selenium installed; none was added"
+        },
+        {
+          "name": "TLS, private CA and multi-machine transport",
+          "status": "NOT_RUN",
+          "reason": "D2, M5/M6"
+        },
+        {
+          "name": "Concurrency and load testing of the transactional paths",
+          "status": "NOT_RUN"
+        },
+        {
+          "name": "Crash recovery by killing a live service mid-run",
+          "status": "NOT_RUN"
+        },
+        {
+          "name": "Docker images, Compose, offline bundle",
+          "status": "NOT_RUN",
+          "reason": "M5"
+        },
+        {
+          "name": "Windows/macOS, mixed architecture, clinical pilot",
+          "status": "NOT_RUN",
+          "reason": "M6"
+        },
+        {
+          "name": "Local IT/security reviewer approval",
+          "status": "NOT_OBTAINED",
+          "reason": "Human decision, blueprint 7.4"
+        }
+      ],
+      "defect_found_and_fixed": "The demo launcher's banner was block-buffered when stdout was redirected, hiding party-b's URL, token and fingerprint. Found by running it for real; stdout is now line-buffered.",
+      "evidence": "evidence/m4/",
+      "report": "evidence/m4/M4_REPORT.md"
     }
   ]
 }

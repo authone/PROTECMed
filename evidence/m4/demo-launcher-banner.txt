@@ -1,0 +1,15 @@
+
+=== PROTECMed synthetic single-host demo (D1) ===
+SIMULATION: separate directories on one host, not separate institutions.
+
+coordinator API   http://127.0.0.1:8080/api/v2
+operator token    <redacted: generated locally at runtime>
+party-a   UI      http://127.0.0.1:8081/local/v2/login
+party-a   token   <redacted: generated locally at runtime>
+party-a   finger  dbffddd3aab878cf8b3ec7e1bc9dadbd428476bebbff1181989052ae6e1d3c72
+party-b   UI      http://127.0.0.1:8082/local/v2/login
+party-b   token   <redacted: generated locally at runtime>
+party-b   finger  d0d12ee3cf1595d9b3e2a305b43a16badb446404aa1fed73e299f8470ef073a7
+
+Ctrl-C to stop.
+

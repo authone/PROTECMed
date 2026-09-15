@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ro">
+<head><meta charset="utf-8"><title>PROTECMed · autentificare</title>
+<link rel="stylesheet" href="/static/style.css"></head>
+<body>
+  <header class="banner demo">{{ mode_banner }} · {{ party_id }}</header>
+  <main>
+    <h1>Autentificare operator local</h1>
+    <form method="post" action="/local/v2/login">
+      <label>Token operator
+        <input type="password" name="operator_token" autocomplete="off" required>
+      </label>
+      <button type="submit">Intra</button>
+    </form>
+    <p class="hint">Tokenul este generat local la pornirea agentului si nu este stocat in imagine.</p>
+  </main>
+</body>
+</html>
